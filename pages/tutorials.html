@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials - Last Resorts</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/tutorials.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Last Resorts</a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="tutorials.html" class="active">Tutorials</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li id="auth-section">
+                        <!-- This will show Login/Logout based on auth status -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tutorials-container">
+        <!-- Welcome Banner -->
+        <div class="welcome-banner">
+            <h1>🎓 Computer & Electronics Tutorials</h1>
+            <p>Learn essential skills with our free tutorials and premium courses</p>
+        </div>
+        
+        <!-- User Info (shown only when logged in) -->
+        <div class="user-info" id="userInfo" style="display: none;">
+            Loading your information...
+        </div>
+
+        <!-- Login Prompt (shown when not logged in) -->
+        <div class="login-prompt" id="loginPrompt" style="display: none;">
+            <h3>🔒 Create Account for Full Access</h3>
+            <p>Watch free tutorials instantly! Create an account to access premium courses and save your progress.</p>
+            <div class="prompt-actions">
+                <a href="signup.html" class="btn btn-primary">Create Free Account</a>
+                <a href="login.html" class="btn btn-secondary">Login</a>
+            </div>
+        </div>
+
+        <!-- FREE TUTORIALS SECTION - Available to everyone -->
+        <h2 class="section-title">🆓 Free Tutorials (Available to All)</h2>
+        <div class="tutorial-grid" id="freeTutorials">
+            <!-- Free tutorials will be loaded here -->
+        </div>
+
+        <!-- PREMIUM COURSES SECTION -->
+        <h2 class="section-title">⭐ Premium Full Courses</h2>
+        <div class="tutorial-grid" id="premiumCourses">
+            <!-- Premium courses will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        // Tutorial Data
+        const freeTutorials = [
+            { id: 1, title: "Basic PC Startup Issues", duration: "3 mins", description: "Fix common computer boot problems" },
+            { id: 2, title: "Phone Screen Cleaning", duration: "2 mins", description: "Proper smartphone screen maintenance" },
+            { id: 3, title: "Laptop Keyboard Repair", duration: "4 mins", description: "Fix stuck keys and keyboard issues" },
+            { id: 4, title: "WiFi Connection Problems", duration: "3 mins", description: "Solve common internet connectivity issues" },
+            { id: 5, title: "Printer Setup Guide", duration: "5 mins", description: "Step-by-step printer installation" },
+            { id: 6, title: "Virus Removal Basics", duration: "4 mins", description: "Remove malware from your computer" },
+            { id: 7, title: "Data Backup Methods", duration: "5 mins", description: "Protect your important files" },
+            { id: 8, title: "Browser Speed Optimization", duration: "3 mins", description: "Make your browser run faster" },
+            { id: 9, title: "Email Setup on Phone", duration: "4 mins", description: "Configure email on mobile devices" },
+            { id: 10, title: "Basic Soldering Techniques", duration: "5 mins", description: "Essential electronics soldering" },
+            { id: 11, title: "Cable Management", duration: "2 mins", description: "Organize your computer cables" },
+            { id: 12, title: "Software Installation Guide", duration: "4 mins", description: "Install programs correctly" },
+            { id: 13, title: "Battery Saving Tips", duration: "3 mins", description: "Extend your device battery life" },
+            { id: 14, title: "Basic Networking", duration: "5 mins", description: "Understand home network setup" },
+            { id: 15, title: "Computer Cleaning Guide", duration: "4 mins", description: "Keep your PC dust-free" }
+        ];
+
+        const premiumCourses = [
+            { id: 101, title: "Complete PC Repair Course", duration: "8 hours", description: "Master computer hardware repair", price: "MK 25,000" },
+            { id: 102, title: "Advanced Phone Repair", duration: "6 hours", description: "Professional mobile device repair", price: "MK 20,000" },
+            { id: 103, title: "Laptop Motherboard Repair", duration: "10 hours", description: "Diagnose and fix motherboard issues", price: "MK 35,000" },
+            { id: 104, title: "Electronics Fundamentals", duration: "12 hours", description: "Learn basic electronics theory", price: "MK 30,000" },
+            { id: 105, title: "Data Recovery Specialist", duration: "7 hours", description: "Recover lost files and data", price: "MK 28,000" },
+            { id: 106, title: "Network Administration", duration: "15 hours", description: "Manage computer networks", price: "MK 40,000" },
+            { id: 107, title: "Cybersecurity Basics", duration: "9 hours", description: "Protect against cyber threats", price: "MK 32,000" },
+            { id: 108, title: "Software Troubleshooting", duration: "6 hours", description: "Fix software and OS issues", price: "MK 22,000" },
+            { id: 109, title: "Hardware Upgrade Master", duration: "5 hours", description: "Upgrade computer components", price: "MK 18,000" },
+            { id: 110, title: "Business IT Support", duration: "14 hours", description: "Provide professional IT support", price: "MK 45,000" }
+        ];
+
+        // Check authentication and load content
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            updateAuthSection(currentUser);
+            loadTutorials(currentUser);
+        });
+
+        function updateAuthSection(currentUser) {
+            const authSection = document.getElementById('auth-section');
+            if (authSection) {
+                if (currentUser) {
+                    authSection.innerHTML = `
+                        <span class="welcome-user">Welcome, ${currentUser.fname}</span>
+                        <button onclick="logout()" class="btn btn-secondary">Logout</button>
+                    `;
+                    document.getElementById('userInfo').style.display = 'block';
+                    document.getElementById('userInfo').innerHTML = `
+                        <strong>👋 Welcome, ${currentUser.name}!</strong><br>
+                        <strong>Email:</strong> ${currentUser.email} | <strong>Phone:</strong> ${currentUser.phone}<br>
+                        <strong>Account Type:</strong> ${currentUser.role === 'admin' ? 'Administrator' : 'Standard User'}
+                    `;
+                    document.getElementById('loginPrompt').style.display = 'none';
+                } else {
+                    authSection.innerHTML = `
+                        <a href="login.html" class="nav-link">Login</a>
+                    `;
+                    document.getElementById('loginPrompt').style.display = 'block';
+                    document.getElementById('userInfo').style.display = 'none';
+                }
+            }
+        }
+
+        function loadTutorials(currentUser) {
+            // Load Free Tutorials (available to everyone)
+            const freeContainer = document.getElementById('freeTutorials');
+            freeContainer.innerHTML = ''; // Clear loading text
+            freeTutorials.forEach(tutorial => {
+                freeContainer.innerHTML += `
+                    <div class="tutorial-card free">
+                        <span class="tutorial-badge badge-free">FREE</span>
+                        <h3>${tutorial.title}</h3>
+                        <p class="tutorial-duration">⏱️ ${tutorial.duration}</p>
+                        <p class="tutorial-description">${tutorial.description}</p>
+                        <button class="btn btn-success" onclick="watchTutorial(${tutorial.id}, 'free')">
+                            Watch Now
+                        </button>
+                    </div>
+                `;
+            });
+
+            // Load Premium Courses (show based on login status)
+            const premiumContainer = document.getElementById('premiumCourses');
+            premiumContainer.innerHTML = ''; // Clear loading text
+            premiumCourses.forEach(course => {
+                if (currentUser) {
+                    // User is logged in - show premium courses with enroll option
+                    premiumContainer.innerHTML += `
+                        <div class="tutorial-card premium">
+                            <span class="tutorial-badge badge-premium">PREMIUM</span>
+                            <h3>${course.title}</h3>
+                            <p class="tutorial-duration">⏱️ ${course.duration}</p>
+                            <p class="tutorial-description">${course.description}</p>
+                            <p class="course-price"><strong>Price: ${course.price}</strong></p>
+                            <button class="btn btn-primary" onclick="enrollCourse(${course.id})">
+                                Enroll Now
+                            </button>
+                        </div>
+                    `;
+                } else {
+                    // User not logged in - show locked premium courses
+                    premiumContainer.innerHTML += `
+                        <div class="tutorial-card premium-locked">
+                            <span class="tutorial-badge badge-locked">🔒 PREMIUM</span>
+                            <h3>${course.title}</h3>
+                            <p class="tutorial-duration">⏱️ ${course.duration}</p>
+                            <p class="tutorial-description">${course.description}</p>
+                            <p class="course-price"><strong>Price: ${course.price}</strong></p>
+                            <button class="btn btn-secondary" onclick="showLoginPrompt()">
+                                Login to Enroll
+                            </button>
+                        </div>
+                    `;
+                }
+            });
+        }
+
+        function watchTutorial(tutorialId, type) {
+            if (type === 'free') {
+                alert(`🎬 Starting free tutorial: ${freeTutorials.find(t => t.id === tutorialId).title}\n\nThis would open the video player in a real application.`);
+            }
+        }
+
+        function enrollCourse(courseId) {
+            const course = premiumCourses.find(c => c.id === courseId);
+            alert(`💳 Enroll in: ${course.title}\n\nDuration: ${course.duration}\nPrice: ${course.price}\n\nIn a real application, this would redirect to payment processing.`);
+        }
+
+        function showLoginPrompt() {
+            alert('Please create an account or login to access premium courses!');
+        }
+
+        function logout() {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'tutorials.html';
+        }
+    </script>
+</body>
+</html>

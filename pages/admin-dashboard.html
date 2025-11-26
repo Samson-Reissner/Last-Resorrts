@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Last Resorts</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin-dashboard.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Last Resorts</h3>
+                <p>Admin Dashboard</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                    <span>📊</span> Dashboard
+                </a>
+                <a href="#users" class="nav-item" data-section="users">
+                    <span>👥</span> User Management
+                </a>
+                <a href="#products" class="nav-item" data-section="products">
+                    <span>🛍️</span> Products
+                </a>
+                <a href="#orders" class="nav-item" data-section="orders">
+                    <span>📦</span> Orders
+                </a>
+                <a href="#payments" class="nav-item" data-section="payments">
+                    <span>💰</span> Payment Verification
+                </a>
+                <a href="#tutorials" class="nav-item" data-section="tutorials">
+                    <span>🎓</span> Tutorials
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1 id="section-title">Dashboard Overview</h1>
+                <div class="admin-actions">
+                    <span id="admin-welcome">Welcome, Admin</span>
+                    <button class="btn btn-outline" onclick="logout()">Logout</button>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div id="dashboard-section" class="section-content active">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3>245</h3>
+                            <p>Total Users</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-info">
+                            <h3>42</h3>
+                            <p>Pending Orders</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-info">
+                            <h3>18</h3>
+                            <p>Payments to Verify</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎓</div>
+                        <div class="stat-info">
+                            <h3>15</h3>
+                            <p>Course Applications</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-section">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">🛒</div>
+                            <div class="activity-content">
+                                <p><strong>John Doe</strong> placed a new order</p>
+                                <span class="activity-time">2 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">💰</div>
+                            <div class="activity-content">
+                                <p><strong>Jane Smith</strong> uploaded payment proof</p>
+                                <span class="activity-time">15 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🎓</div>
+                            <div class="activity-content">
+                                <p><strong>Mike Johnson</strong> applied for full course</p>
+                                <span class="activity-time">1 hour ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users Management Section -->
+            <div id="users-section" class="section-content">
+                <div class="section-header">
+                    <h2>User Management</h2>
+                    <button class="btn btn-primary">Export Users</button>
+                </div>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@email.com</td>
+                                <td>+265 123 4567</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn btn-small btn-outline">View</button>
+                                    <button class="btn btn-small btn-danger">Suspend</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane@email.com</td>
+                                <td>+265 987 6543</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <button class="btn btn-small btn-outline">View</button>
+                                    <button class="btn btn-small btn-success">Approve</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Products Management Section -->
+            <div id="products-section" class="section-content">
+                <div class="section-header">
+                    <h2>Product Management</h2>
+                    <button class="btn btn-primary">Add New Product</button>
+                </div>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>iPhone 15 Pro Max</td>
+                                <td>Phones</td>
+                                <td>MWK 2,100,000</td>
+                                <td>15</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn btn-small btn-outline">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dell XPS 13 Laptop</td>
+                                <td>Laptops</td>
+                                <td>MWK 1,500,000</td>
+                                <td>8</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn btn-small btn-outline">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Orders Section -->
+            <div id="orders-section" class="section-content">
+                <div class="section-header">
+                    <h2>Order Management</h2>
+                </div>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-001</td>
+                                <td>John Doe</td>
+                                <td>MWK 450,000</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>2024-01-15</td>
+                                <td>
+                                    <button class="btn btn-small btn-outline">View</button>
+                                    <button class="btn btn-small btn-success">Process</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-002</td>
+                                <td>Jane Smith</td>
+                                <td>MWK 1,200,000</td>
+                                <td><span class="status-badge processing">Processing</span></td>
+                                <td>2024-01-14</td>
+                                <td>
+                                    <button class="btn btn-small btn-outline">View</button>
+                                    <button class="btn btn-small btn-success">Ship</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Payment Verification Section -->
+            <div id="payments-section" class="section-content">
+                <div class="section-header">
+                    <h2>Payment Verification</h2>
+                </div>
+                <div class="payment-cards">
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <h4>Order #ORD-001</h4>
+                            <span class="payment-amount">MWK 450,000</span>
+                        </div>
+                        <div class="payment-details">
+                            <p><strong>Customer:</strong> John Doe</p>
+                            <p><strong>Method:</strong> Airtel Money</p>
+                            <p><strong>Transaction ID:</strong> TXN-789123</p>
+                        </div>
+                        <div class="payment-proof">
+                            <div class="proof-placeholder">📱 Payment Screenshot</div>
+                        </div>
+                        <div class="payment-actions">
+                            <button class="btn btn-success">Approve</button>
+                            <button class="btn btn-danger">Reject</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tutorials Section -->
+            <div id="tutorials-section" class="section-content">
+                <div class="section-header">
+                    <h2>Tutorial Management</h2>
+                    <button class="btn btn-primary">Upload Tutorial</button>
+                </div>
+                <div class="tutorials-grid">
+                    <div class="tutorial-admin-card">
+                        <div class="tutorial-admin-header">
+                            <h4>Basic PC Troubleshooting</h4>
+                            <span class="views">1,245 views</span>
+                        </div>
+                        <p>Learn how to fix common computer issues</p>
+                        <div class="tutorial-stats">
+                            <span>Duration: 5:30</span>
+                            <span>Uploaded: 2024-01-10</span>
+                        </div>
+                        <div class="tutorial-actions">
+                            <button class="btn btn-small btn-outline">Edit</button>
+                            <button class="btn btn-small btn-danger">Delete</button>
+                            <button class="btn btn-small btn-success">Stats</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

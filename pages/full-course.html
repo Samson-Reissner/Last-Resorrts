@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Course - Last Resorts</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/full-course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Last Resorts</h2>
+                <span>Professional Courses</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="full-course-container">
+        <!-- Course Access Prompt -->
+        <div id="course-login-prompt" class="course-login-section">
+            <div class="course-login-content">
+                <h2>🔒 Professional Course Access</h2>
+                <p>Please enter your course credentials to access professional content</p>
+                <form class="course-login-form" id="course-login-form">
+                    <div class="form-group">
+                        <label for="course-email">Email Address</label>
+                        <input type="email" id="course-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course-password">Course Password</label>
+                        <input type="password" id="course-password" required placeholder="Enter your course password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Access Course</button>
+                </form>
+                <p class="login-help">Don't have course access? <a href="tutorials.html">Enroll first</a></p>
+            </div>
+        </div>
+
+        <!-- Full Course Content (for enrolled users) -->
+        <div id="full-course-content" style="display: none;">
+            <div class="course-header">
+                <h1 id="course-title">Professional Course</h1>
+                <p id="course-description">Advanced learning content</p>
+                <div class="course-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span id="progress-text">0% Complete</span>
+                </div>
+            </div>
+
+            <div class="course-content-grid">
+                <!-- Sidebar Navigation -->
+                <aside class="course-sidebar">
+                    <h3>Course Modules</h3>
+                    <div class="modules-list" id="modules-list">
+                        <!-- Modules loaded by JavaScript -->
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="course-main">
+                    <div class="video-player-section">
+                        <div class="video-placeholder" id="video-placeholder">
+                            <div class="play-icon">▶</div>
+                            <p>Select a module to start learning</p>
+                        </div>
+                        <div class="video-content" id="video-content" style="display: none;">
+                            <h3 id="current-module-title">Module Title</h3>
+                            <div class="video-container">
+                                <div class="video-player">
+                                    <!-- Video player would go here -->
+                                    <div class="video-placeholder-large">
+                                        <div class="play-icon-large">▶</div>
+                                        <p>Professional Course Video Content</p>
+                                        <small>Duration: <span id="video-duration">1h 30m</span></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-actions">
+                                <button class="btn btn-primary" onclick="markAsCompleted()">Mark as Completed</button>
+                                <button class="btn btn-outline" onclick="downloadMaterials()">Download Materials</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resources-section">
+                        <h3>Course Resources</h3>
+                        <div class="resources-grid" id="resources-grid">
+                            <!-- Resources loaded by JavaScript -->
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/full-course.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

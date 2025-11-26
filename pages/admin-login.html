@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Last Resorts</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin-login.css">
+</head>
+<body>
+    <div class="admin-login-container">
+        <div class="admin-login-card">
+            <div class="admin-login-header">
+                <div class="admin-logo">
+                    <h2>Last Resorts</h2>
+                    <span>Admin Portal</span>
+                </div>
+                <div class="security-badge">
+                    🔒 Secure Access
+                </div>
+            </div>
+            
+            <div class="login-form-container">
+                <h3>Administrator Login</h3>
+                <p class="login-subtitle">Restricted access - Authorized personnel only</p>
+                
+                <form class="admin-login-form" id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="adminName">Full Name</label>
+                        <input type="text" id="adminName" name="adminName" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" name="adminPassword" required placeholder="Enter your password">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full btn-admin">
+                        🔐 Access Dashboard
+                    </button>
+                </form>
+                
+                <div class="security-notice">
+                    <p><strong>Security Notice:</strong> This area is restricted to authorized administrators only. All access attempts are logged.</p>
+                </div>
+            </div>
+            
+            <div class="admin-login-footer">
+                <p><a href="../index.html">← Back to Main Site</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/admin-login.js"></script>
+</body>
+</html>
