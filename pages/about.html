@@ -9,28 +9,34 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="../index.html" class="logo">Last Resorts</a>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="tutorials.html">Tutorials</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li id="auth-section">
-                        <a href="login.html" class="nav-link">Login</a>
-                    </li>
-                </ul>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo/company-logo.png" alt="Last Resorts Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="repair-services.html" class="nav-link">Repair Services</a></li>
+                <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="cart.html" class="nav-link cart-icon">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+            <div class="hamburger">
+                <img src="images/icons/menu-icon.png" alt="Menu" class="menu-icon">
             </div>
         </div>
     </nav>
 
     <div class="about-container">
-        <!-- Hero Section -->
         <section class="hero-section">
+            <div class="hero-image">
+                <img src="/images/hero-background.jpg" alt="Last Resorts Electronics Workshop">
+            </div>
+            <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>Your Last Stop for Electronics Repair & Solutions!</h1>
-                <p class="hero-subtitle">Expert device repairs, quality electronics, and tech solutions you can trust</p>
+                <h1>Your Last Stop for Electronics Repair & Solutions</h1>
+                <p class="hero-subtitle">Expert device repairs, quality electronics, and tech solutions you can trust in Malawi</p>
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number">5,000+</span>
@@ -44,21 +50,34 @@
                         <span class="stat-number">24hr</span>
                         <span class="stat-label">Quick Turnaround</span>
                     </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Customer Satisfaction</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Who We Are -->
-        <section class="section">
+        <section class="section about-section">
             <div class="section-header">
                 <h2>Who We Are</h2>
-                <div class="section-content">
-                    <p class="lead">Last Resorts is your trusted partner for all things electronics - from complex repairs to quality gadgets and expert advice.</p>
-                    <p>Founded by tech enthusiasts who were tired of seeing people overpay for subpar repairs, we've grown from a small repair shop into a comprehensive electronics solution center serving both individuals and businesses.</p>
-                    <div class="achievement-card">
-                        <div class="achievement-icon">🔧</div>
-                        <div class="achievement-content">
-                            <h4>Certified Technical Excellence</h4>
+                <p class="section-subtitle">Your Trusted Electronics Partner in Malawi</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/images/workshop-team.jpg" alt="Our Repair Workshop Team">
+                </div>
+                <div class="about-text">
+                    <h3>From Passion to Profession</h3>
+                    <p>Founded in 2018 by a team of passionate tech enthusiasts, <strong>Last Resorts</strong> began as a small repair shop with a big vision: to provide reliable, affordable electronics solutions for everyone in Malawi.</p>
+                    <p>Frustrated by seeing people overpay for subpar repairs or being told their devices were "beyond repair," we set out to change the electronics service industry with transparency, expertise, and genuine care.</p>
+                    <br>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <img src="/images/trophy-icon.png" alt="Achievement Icon">
+                        </div>
+                        <div class="highlight-content">
+                            <h4>Malawi's Most Trusted Repair Center</h4>
                             <p>As one of the few repair centers in the region with certified technicians across multiple device brands, we're proud to set the standard for quality electronics repair and customer service.</p>
                         </div>
                     </div>
@@ -66,228 +85,309 @@
             </div>
         </section>
 
-        <!-- Vision & Mission -->
-        <section class="section vision-mission">
-            <div class="vm-grid">
-                <div class="vm-card vision">
-                    <div class="vm-icon">🎯</div>
+        <section class="section vision-mission-section">
+            <div class="section-header">
+                <h2>Our Vision & Mission</h2>
+            </div>
+            <div class="vision-mission-grid">
+                <div class="vm-card vision-card">
+                    <div class="vm-icon">
+                        <img src="/images/target-icon.png" alt="Vision Icon">
+                    </div>
                     <h3>Our Vision</h3>
-                    <p>To become Africa's most trusted electronics repair and solutions partner, making technology accessible and sustainable for everyone.</p>
+                    <p>To become Malawi's most trusted electronics repair and solutions partner, making technology accessible, affordable, and sustainable for every Malawian.</p>
+                    <ul class="vision-points">
+                        <li>Leading technology service provider in Southern Africa</li>
+                        <li>Center for electronics education and skill development</li>
+                        <li>Promoter of sustainable technology practices</li>
+                    </ul>
                 </div>
-                <div class="vm-card mission">
-                    <div class="vm-icon">🚀</div>
+                <div class="vm-card mission-card">
+                    <div class="vm-icon">
+                        <img src="/images/rocket-icon.png" alt="Mission Icon">
+                    </div>
                     <h3>Our Mission</h3>
                     <p>To provide reliable, affordable electronics repair and quality products while educating our community about technology maintenance and sustainability.</p>
+                    <ul class="mission-points">
+                        <li>Exceptional repair services with warranty</li>
+                        <li>Quality electronics at fair prices</li>
+                        <li>Free tech education for our community</li>
+                        <li>Environmental responsibility in e-waste management</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- What Sets Us Apart -->
-        <section class="section">
+        <section class="section features-section">
             <div class="section-header">
                 <h2>Why Choose Last Resorts?</h2>
-                <p class="section-subtitle">We're different from typical repair shops - here's why customers keep coming back:</p>
+                <p class="section-subtitle">We're different from typical repair shops - here's why customers keep coming back</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <h4>Expert Technicians</h4>
-                    <p>Certified professionals with years of experience across all major device brands and models</p>
+                    <div class="feature-icon">
+                        <img src="/images/technician-icon.png" alt="Expert Technician">
+                    </div>
+                    <h4>Certified Experts</h4>
+                    <p>Our technicians are certified by major brands with years of hands-on experience across all device types.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h4>Fast Turnaround</h4>
-                    <p>Most repairs completed within 24 hours because we know you need your devices back quickly</p>
+                    <div class="feature-icon">
+                        <img src="/images/fast-icon.png" alt="Fast Service">
+                    </div>
+                    <h4>Same-Day Service</h4>
+                    <p>Most repairs completed within 24 hours because we understand you need your devices back quickly.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💎</div>
-                    <h4>Quality Parts</h4>
-                    <p>We use only genuine or high-quality compatible parts with proper warranties</p>
+                    <div class="feature-icon">
+                        <img src="/images/parts-icon.png" alt="Genuine Parts">
+                    </div>
+                    <h4>Genuine Parts</h4>
+                    <p>We use only genuine or high-quality compatible parts with proper 6-month warranties on all repairs.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h4>Fair Pricing</h4>
-                    <p>Transparent quotes with no hidden costs - we'll even tell you if repair isn't worth it</p>
+                    <div class="feature-icon">
+                        <img src="/images/pricing-icon.png" alt="Transparent Pricing">
+                    </div>
+                    <h4>Transparent Pricing</h4>
+                    <p>Free diagnostics with no hidden costs. We provide honest quotes before any work begins.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h4>Warranty Protection</h4>
-                    <p>Comprehensive warranty on all repairs and parts for your peace of mind</p>
+                    <div class="feature-icon">
+                        <img src="/images/warranty-icon.png" alt="Warranty">
+                    </div>
+                    <h4>Warranty Assurance</h4>
+                    <p>Comprehensive warranty on all repairs. If an issue recurs, we fix it free of charge.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h4>Free Advice</h4>
-                    <p>Honest recommendations on repair vs replacement and device maintenance tips</p>
+                    <div class="feature-icon">
+                        <img src="/images/local-icon.png" alt="Local Service">
+                    </div>
+                    <h4>Local & Accessible</h4>
+                    <p>Based right here in Blantyre, serving Malawians with understanding of local needs and conditions.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Our Journey -->
         <section class="section timeline-section">
             <div class="section-header">
-                <h2>Our Journey</h2>
+                <h2>Our Growth Journey</h2>
+                <p class="section-subtitle">From humble beginnings to trusted community partner</p>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-year">2018</div>
                     <div class="timeline-content">
                         <h4>Humble Beginnings</h4>
-                        <p>Started as a small repair shop in a garage, focusing on phone and laptop repairs</p>
+                        <p>Started as a small repair shop in a garage, focusing on phone and laptop repairs for local community.</p>
+                        <div class="timeline-image">
+                            <img src="/images/startup-2018.jpg" alt="Our First Workshop">
+                        </div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2020</div>
                     <div class="timeline-content">
                         <h4>Expanded Services</h4>
-                        <p>Added electronics sales and began offering business IT support services</p>
+                        <p>Added electronics sales and began offering business IT support services across Blantyre.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2022</div>
                     <div class="timeline-content">
                         <h4>Certification Achievement</h4>
-                        <p>Became certified technicians for major brands and launched our tutorial program</p>
+                        <p>Became certified technicians for major brands and launched our free community tutorial program.</p>
                     </div>
                 </div>
                 <div class="timeline-item current">
-                    <div class="timeline-year">Present</div>
+                    <div class="timeline-year">Now</div>
                     <div class="timeline-content">
                         <h4>Growing Community Hub</h4>
-                        <p>Expanding to become a complete tech solution center with repairs, sales, and education</p>
+                        <p>Expanding to become a complete tech solution center serving individuals and businesses nationwide.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Core Values -->
         <section class="section values-section">
-            <div class="section-header">
-                <h2>Our Core Values</h2>
-                <p class="section-subtitle">The principles that guide every repair and interaction</p>
+            <!-- Background Image Container -->
+            <div class="values-background">
+                <img src="/images/hero-background2.avif" alt="Background" class="bg-image">
             </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">🔧</div>
-                    <h4>Quality Craftsmanship</h4>
-                    <p>Every repair gets the same attention to detail, whether it's a simple screen replacement or complex motherboard work.</p>
+            
+            <div class="values-overlay"></div>
+            
+            <div class="values-content">
+                <div class="section-header">
+                    <h2>Our Core Values</h2>
+                    <p class="section-subtitle">The principles guiding every repair and customer interaction</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">⚡</div>
-                    <h4>Speed & Efficiency</h4>
-                    <p>We respect your time with quick diagnostics and efficient repairs to minimize your downtime.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">💻</div>
-                    <h4>Technical Excellence</h4>
-                    <p>Continuous learning to stay current with evolving technology and repair techniques.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">💰</div>
-                    <h4>Honest Value</h4>
-                    <p>Fair pricing with transparent quotes - we'll never recommend unnecessary repairs.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🛡️</div>
-                    <h4>Customer Assurance</h4>
-                    <p>Comprehensive warranties and standing behind our work with confidence.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🌱</div>
-                    <h4>Sustainability</h4>
-                    <p>Promoting device longevity and proper e-waste recycling to reduce environmental impact.</p>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="/images/quality-icon.png" alt="Quality">
+                        </div>
+                        <h4>Quality Craftsmanship</h4>
+                        <p>Every repair gets meticulous attention, ensuring long-lasting results you can depend on.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="/images/fast-icon.png" alt="Speed">
+                        </div>
+                        <h4>Speed & Efficiency</h4>
+                        <p>Quick diagnostics and efficient repairs to minimize your device downtime.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="/images/excellence-icon.png" alt="Excellence">
+                        </div>
+                        <h4>Technical Excellence</h4>
+                        <p>Continuous training to stay current with evolving technology and repair techniques.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="/images/honesty-icon.png" alt="Honesty">
+                        </div>
+                        <h4>Honest Value</h4>
+                        <p>Fair pricing with transparent quotes - we'll never recommend unnecessary repairs.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="/images/assurance-icon.png" alt="Assurance">
+                        </div>
+                        <h4>Customer Assurance</h4>
+                        <p>Standing behind our work with confidence and comprehensive warranties.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="/images/sustainability-icon.png" alt="Sustainability">
+                        </div>
+                        <h4>Sustainability</h4>
+                        <p>Promoting device longevity and proper e-waste recycling to protect our environment.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Overview -->
         <section class="section services-section">
             <div class="section-header">
-                <h2>What We Do</h2>
+                <h2>Comprehensive Electronics Solutions</h2>
+                <p class="section-subtitle">Everything you need for your devices in one place</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h4>Device Repairs</h4>
+                    <div class="service-icon">
+                        <img src="/images/repair-icon.png" alt="Repairs">
+                    </div>
+                    <h4>Expert Repairs</h4>
                     <ul>
-                        <li>Phone & Tablet Repairs</li>
-                        <li>Laptop & Computer Fixes</li>
-                        <li>Gaming Console Repair</li>
-                        <li>Smart Device Services</li>
+                        <li>Smartphone & Tablet Repair</li>
+                        <li>Laptop & Desktop Computer Service</li>
+                        <li>Gaming Console Restoration</li>
+                        <li>Smart Device & Appliance Fixes</li>
                     </ul>
+                    <a href="repair-services.html" class="service-link">View Repair Services →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🛒</div>
-                    <h4>Electronics Sales</h4>
+                    <div class="service-icon">
+                        <img src="/images/products-icon.png" alt="Products">
+                    </div>
+                    <h4>Quality Products</h4>
                     <ul>
-                        <li>Quality Refurbished Devices</li>
+                        <li>Certified Refurbished Devices</li>
                         <li>New Gadgets & Accessories</li>
                         <li>Genuine Replacement Parts</li>
-                        <li>Computer Components</li>
+                        <li>Computer Components & Peripherals</li>
                     </ul>
+                    <a href="products.html" class="service-link">Browse Products →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🎓</div>
+                    <div class="service-icon">
+                        <img src="/images/education-icon.png" alt="Education">
+                    </div>
                     <h4>Education & Support</h4>
                     <ul>
-                        <li>Free Repair Tutorials</li>
-                        <li>Device Maintenance Tips</li>
+                        <li>Free Repair Tutorials & Guides</li>
+                        <li>Device Maintenance Workshops</li>
                         <li>Business IT Support</li>
-                        <li>Tech Consultations</li>
+                        <li>Personal Tech Consultations</li>
                     </ul>
+                    <a href="tutorials.html" class="service-link">Learn Skills →</a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="section contact-section">
-            <div class="section-header">
-                <h2>Get Your Devices Fixed Today!</h2>
-                <p class="section-subtitle">We're here to help with all your electronics needs</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h4>Email Us</h4>
-                    <p>Send photos of your device issue for a quick quote</p>
-                    <a href="mailto:repairs@lastresorts.com" class="contact-link">repairs@lastresorts.com</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h4>Call Now</h4>
-                    <p>Speak directly with our technicians for advice</p>
-                    <a href="tel:+260962284039" class="contact-link">+260 962 284039</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">🏢</div>
-                    <h4>Visit Our Shop</h4>
-                    <p>Bring your devices for free diagnostics</p>
-                    <address class="contact-address">
-                        Tech Hub Center, Suite 5<br>
-                        Independence Avenue<br>
-                        Lusaka | Zambia
-                    </address>
+        <section class="section cta-section">
+            <div class="cta-content">
+                <h2>Ready to Fix Your Device?</h2>
+                <p>Get a free diagnostic and quote today. Our team is ready to help!</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <span class="btn-icon">
+                            📞 
+                        </span>
+                        Contact Us Now
+                    </a>
+                    <a href="repair-services.html" class="btn btn-secondary btn-large">
+                        <span class="btn-icon">
+                            🔧 
+                        </span>
+                        View Services
+                    </a>
                 </div>
             </div>
         </section>
     </div>
 
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo/footer-logo.png" alt="Last Resorts Logo" class="footer-logo">
+                    <h3>Last Resorts</h3>
+                    <p>Your Tech Partner in Malawi</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/images/facebook-icon.png" alt="Facebook"> Facebook</a>
+                        <a href="#"><img src="/images/instagram-icon.png" alt="Instagram"> Instagram</a>
+                        <a href="#"><img src="/images/linkedin-icon.png" alt="LinkedIn"> LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="pages/products.html">Products</a></li>
+                        <li><a href="pages/repair-services.html">Repair Services</a></li>
+                        <li><a href="pages/tutorials.html">Tutorials</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/admin-login.html">Admin Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                        <li><a href="pages/repair-services.html">Repair Services</a></li>
+                        <li><a href="pages/warranty.html">Warranty Info</a></li>
+                        <li><a href="pages/shipping.html">Shipping Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Last Resorts Computer and Electronics. All rights reserved. | Quality Tech Solutions in Malawi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-            const authSection = document.getElementById('auth-section');
-            
-            if (authSection && currentUser) {
-                authSection.innerHTML = `
-                    <span class="welcome-user">Welcome, ${currentUser.fname}</span>
-                    <button onclick="logout()" class="btn btn-secondary">Logout</button>
-                `;
-            }
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            const cartCount = document.getElementById('cart-count');
+            if (cartCount) cartCount.textContent = totalItems;
         });
-
-        function logout() {
-            localStorage.removeItem('currentUser');
-            window.location.href = 'about.html';
-        }
     </script>
 </body>
 </html>

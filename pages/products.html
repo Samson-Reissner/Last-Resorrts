@@ -6,26 +6,26 @@
     <title>Products - Last Resorts</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Last Resorts</h2>
-                <span>Computers & Electronics</span>
+                <img src="images/logo/company-logo.png" alt="Last Resorts Logo" class="logo-img">
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="products.html" class="nav-link active">Products</a></li>
-                <li class="nav-item"><a href="../index.html#tutorials" class="nav-link">Tutorials</a></li>
-                <li class="nav-item"><a href="../index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="repair-services.html" class="nav-link">Repair Services</a></li>
+                <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
                 <li class="nav-item"><a href="cart.html" class="nav-link cart-icon">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <img src="images/icons/menu-icon.png" alt="Menu" class="menu-icon">
             </div>
         </div>
     </nav>
@@ -33,7 +33,7 @@
     <div class="products-container">
         <!-- Page Header -->
         <div class="products-header">
-            <h1>Our Products</h1>
+            <h1>All Products</h1>
             <p>Quality computers, phones, and accessories</p>
         </div>
 
@@ -41,7 +41,8 @@
         <div class="category-filter">
             <button class="filter-btn active" data-category="all">All Products</button>
             <button class="filter-btn" data-category="phones">Phones</button>
-            <button class="filter-btn" data-category="pcs">PCs & Laptops</button>
+            <button class="filter-btn" data-category="laptops">Laptops</button>
+            <button class="filter-btn" data-category="desktops">Desktops</button>
             <button class="filter-btn" data-category="accessories">Accessories</button>
         </div>
 
@@ -58,9 +59,1612 @@
             </select>
         </div>
 
-        <!-- Products Grid -->
+        <!-- Products Grid - STATIC PRODUCTS -->
         <div class="products-grid" id="products-grid">
-            <!-- Products will be loaded by JavaScript -->
+            <!-- Product 1 - iPhone -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge exclusive">EXCLUSIVE</div>
+                <div class="product-image">
+                    <img src="../images/iphone-15-pro-max.jpg" alt="iPhone 15 Pro Max" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">iPhone 15 Pro Max 1TB</h3>
+                    <div class="product-specs">6.7" Super Retina XDR • A17 Pro • Titanium • 5X Zoom</div>
+                    <div class="product-price">MWK 3,899,999</div>
+                    <div class="product-exclusive">Malawi Exclusive Stock</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 - Samsung -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/samsung-s24-ultra.jpg" alt="Samsung Galaxy S24 Ultra" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-title">Galaxy S24 Ultra 5G</h3>
+                    <div class="product-specs">12GB/512GB • Titanium Gray • 200MP • S Pen Included</div>
+                    <div class="product-price">MWK 2,499,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 - Google Pixel -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge discount">-15% OFF</div>
+                <div class="product-image">
+                    <img src="../images/google-pixel-8-pro.jpg" alt="Google Pixel 8 Pro" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">GOOGLE</div>
+                    <h3 class="product-title">Pixel 8 Pro 5G</h3>
+                    <div class="product-specs">12GB/256GB • Bay Blue • Tensor G3 • Best Camera</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 1,899,999</span>
+                        MWK 1,614,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 - Xiaomi -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/xiaomi-14-pro.jpg" alt="Xiaomi 14 Pro" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">XIAOMI</div>
+                    <h3 class="product-title">Xiaomi 14 Pro 5G</h3>
+                    <div class="product-specs">16GB/512GB • Leica Camera • Snapdragon 8 Gen 3</div>
+                    <div class="product-price">MWK 1,799,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 5 - OnePlus -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge exclusive">EXCLUSIVE</div>
+                <div class="product-image">
+                    <img src="../images/oneplus-12.jpg" alt="OnePlus 12" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">ONEPLUS</div>
+                    <h3 class="product-title">OnePlus 12 5G</h3>
+                    <div class="product-specs">16GB/512GB • Flowy Emerald • Hasselblad Camera</div>
+                    <div class="product-price">MWK 1,699,999</div>
+                    <div class="product-exclusive">100W Fast Charging</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 6 - Samsung Fold -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge exclusive">FLAGSHIP</div>
+                <div class="product-image">
+                    <img src="../images/samsung-fold5.jpg" alt="Samsung Galaxy Z Fold5" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-title">Galaxy Z Fold5 5G</h3>
+                    <div class="product-specs">12GB/1TB • Phantom Black • Foldable • S Pen</div>
+                    <div class="product-price">MWK 3,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 7 - MacBook Pro -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge exclusive">PRO</div>
+                <div class="product-image">
+                    <img src="../images/macbook-pro-16.jpg" alt="Apple MacBook Pro 16-inch" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">MacBook Pro 16" M3 Max</h3>
+                    <div class="product-specs">48GB RAM • 2TB SSD • M3 Max • Space Black</div>
+                    <div class="product-price">MWK 6,499,999</div>
+                    <div class="product-exclusive">Free AirPods Pro 2</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 8 - Dell XPS -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge discount">-20% OFF</div>
+                <div class="product-image">
+                    <img src="../images/dell-xps-15.jpg" alt="Dell XPS 15 Laptop" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">DELL</div>
+                    <h3 class="product-title">XPS 15 9530 Laptop</h3>
+                    <div class="product-specs">32GB RAM • 1TB SSD • i9 • RTX 4070 • 3.5K OLED</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 4,200,000</span>
+                        MWK 3,359,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 9 - HP Spectre -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/hp-spectre-x360.jpg" alt="HP Spectre x360 Laptop" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">HP</div>
+                    <h3 class="product-title">Spectre x360 2-in-1</h3>
+                    <div class="product-specs">16GB RAM • 2TB SSD • i7 • 4K OLED • Nightfall Black</div>
+                    <div class="product-price">MWK 2,899,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 10 - Lenovo ThinkPad -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge exclusive">BUSINESS</div>
+                <div class="product-image">
+                    <img src="../images/lenovo-thinkpad-x1.jpg" alt="Lenovo ThinkPad X1 Carbon" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">LENOVO</div>
+                    <h3 class="product-title">ThinkPad X1 Carbon Gen 11</h3>
+                    <div class="product-specs">32GB RAM • 2TB SSD • i7 • 14" 2.8K OLED • 4G LTE</div>
+                    <div class="product-price">MWK 3,499,999</div>
+                    <div class="product-exclusive">3 Years Premium Warranty</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 11 - ASUS ROG -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge exclusive">GAMING</div>
+                <div class="product-image">
+                    <img src="../images/asus-rog-zephyrus.jpg" alt="ASUS ROG Zephyrus G16" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">ASUS</div>
+                    <h3 class="product-title">ROG Zephyrus G16</h3>
+                    <div class="product-specs">32GB RAM • 2TB SSD • i9 • RTX 4090 • 240Hz Nebula Display</div>
+                    <div class="product-price">MWK 5,999,999</div>
+                    <div class="product-exclusive">Ultimate Gaming Laptop</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 12 - Surface Laptop -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge discount">-25% OFF</div>
+                <div class="product-image">
+                    <img src="../images/surface-laptop-5.jpg" alt="Microsoft Surface Laptop 5" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">MICROSOFT</div>
+                    <h3 class="product-title">Surface Laptop 5</h3>
+                    <div class="product-specs">16GB RAM • 512GB SSD • i7 • 13.5" Touch • Platinum</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 2,500,000</span>
+                        MWK 1,874,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 13 - iMac -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/imac-24-inch.jpg" alt="Apple iMac 24-inch" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">iMac 24" M3</h3>
+                    <div class="product-specs">16GB RAM • 512GB SSD • 8-core CPU • 10-core GPU • Green</div>
+                    <div class="product-price">MWK 3,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 14 - Alienware -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge exclusive">GAMING</div>
+                <div class="product-image">
+                    <img src="../images/alienware-aurora.jpg" alt="Dell Alienware Aurora R15" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">DELL</div>
+                    <h3 class="product-title">Alienware Aurora R15</h3>
+                    <div class="product-specs">64GB RAM • 4TB SSD • i9 • RTX 4090 • Liquid Cooling</div>
+                    <div class="product-price">MWK 7,999,999</div>
+                    <div class="product-exclusive">Ultimate Gaming PC</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 15 - HP Omen -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge discount">-30% OFF</div>
+                <div class="product-image">
+                    <img src="../images/hp-omen-45l.jpg" alt="HP Omen 45L Gaming Desktop" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">HP</div>
+                    <h3 class="product-title">OMEN 45L Gaming Desktop</h3>
+                    <div class="product-specs">32GB RAM • 2TB SSD • i7 • RTX 4080 • Cryo Chamber</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 5,500,000</span>
+                        MWK 3,849,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 16 - Lenovo Workstation -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge exclusive">WORKSTATION</div>
+                <div class="product-image">
+                    <img src="../images/lenovo-thinkstation.jpg" alt="Lenovo ThinkStation P620" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">LENOVO</div>
+                    <h3 class="product-title">ThinkStation P620</h3>
+                    <div class="product-specs">128GB RAM • 8TB SSD • Threadripper Pro • RTX A6000</div>
+                    <div class="product-price">MWK 12,999,999</div>
+                    <div class="product-exclusive">Professional Workstation</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 17 - Apple Watch -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge new">CLASSIC</div>
+                <div class="product-image">
+                    <img src="../images/apple-watch-ultra2.jpg" alt="Apple Watch Ultra 2" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">Apple Watch Ultra 2</h3>
+                    <div class="product-specs">49mm Titanium • Cellular • Ocean Band • 36hr Battery</div>
+                    <div class="product-price">MWK 1,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 18 - Samsung Watch -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge discount">CLASSIC</div>
+                <div class="product-image">
+                    <img src="../images/samsung-watch6.jpg" alt="Samsung Galaxy Watch6 Classic" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-title">Galaxy Watch6 Classic</h3>
+                    <div class="product-specs">47mm • LTE • Rotating Bezel • Sapphire Glass • Black</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 850,000</span>
+                        MWK 679,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 19 - Garmin Watch -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge exclusive">PRO</div>
+                <div class="product-image">
+                    <img src="../images/garmin-fenix7.jpg" alt="Garmin Fenix 7X Sapphire Solar" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">GARMIN</div>
+                    <h3 class="product-title">Fenix 7X Sapphire Solar</h3>
+                    <div class="product-specs">51mm • Solar Charging • Multi-band GPS • 37 Days Battery</div>
+                    <div class="product-price">MWK 1,599,999</div>
+                    <div class="product-exclusive">Advanced Sports Watch</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 20 - Huawei Watch -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge new">SMART</div>
+                <div class="product-image">
+                    <img src="../images/huawei-watch-gt4.jpg" alt="Huawei Watch GT 4" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">HUAWEI</div>
+                    <h3 class="product-title">Watch GT 4 46mm</h3>
+                    <div class="product-specs">Stainless Steel • 2 Week Battery • 100+ Sport Modes</div>
+                    <div class="product-price">MWK 549,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 21 - AirPods Max -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge discount">MUSIC</div>
+                <div class="product-image">
+                    <img src="../images/airpods-max.jpg" alt="Apple AirPods Max" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">AirPods Max - Space Gray</h3>
+                    <div class="product-specs">Active Noise Cancellation • Spatial Audio • 20hr Battery</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 1,200,000</span>
+                        MWK 899,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 22 - Samsung Buds -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge new">MUSIC</div>
+                <div class="product-image">
+                    <img src="../images/samsung-buds2-pro.jpg" alt="Samsung Galaxy Buds2 Pro" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-title">Galaxy Buds2 Pro</h3>
+                    <div class="product-specs">Hi-Fi 24bit Audio • ANC • IPX7 Waterproof • Bora Purple</div>
+                    <div class="product-price">MWK 399,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 23 - Logitech Mouse -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge exclusive">PRODUCTIVITY</div>
+                <div class="product-image">
+                    <img src="../images/logitech-mx-master.jpg" alt="Logitech MX Master 3S Mouse" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">LOGITECH</div>
+                    <h3 class="product-title">MX Master 3S Mouse</h3>
+                    <div class="product-specs">8K DPI • MagSpeed Scroll • Multi-Device • 70 Days Battery</div>
+                    <div class="product-price">MWK 249,999</div>
+                    <div class="product-exclusive">Best for Productivity</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 24 - Anker Power Bank -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge exclusive">POWER</div>
+                <div class="product-image">
+                    <img src="../images/anker-737-powerbank.jpg" alt="Anker 737 Power Bank" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">ANKER</div>
+                    <h3 class="product-title">737 Power Bank (PowerCore 24K)</h3>
+                    <div class="product-specs">24,000mAh • 140W Output • Charges Laptop • Digital Display</div>
+                    <div class="product-price">MWK 299,999</div>
+                    <div class="product-exclusive">Charges MacBook Pro</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 25 - Sony Xperia -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/sony-xperia-1v.jpg" alt="Sony Xperia 1 V" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SONY</div>
+                    <h3 class="product-title">Xperia 1 V 5G</h3>
+                    <div class="product-specs">12GB/256GB • 4K OLED • Exmor T Sensor • Creator Mode</div>
+                    <div class="product-price">MWK 1,899,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 26 - Nothing Phone -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge exclusive">EXCLUSIVE</div>
+                <div class="product-image">
+                    <img src="../images/nothing-phone2.jpg" alt="Nothing Phone 2" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">NOTHING</div>
+                    <h3 class="product-title">Phone 2 5G</h3>
+                    <div class="product-specs">12GB/256GB • Glyph Interface • Snapdragon 8+ Gen 1</div>
+                    <div class="product-price">MWK 1,299,999</div>
+                    <div class="product-exclusive">Unique Glyph Interface</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 27 - Motorola Razr -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge exclusive">FOLDABLE</div>
+                <div class="product-image">
+                    <img src="../images/motorola-razr-plus.jpg" alt="Motorola Razr+ 2023" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">MOTOROLA</div>
+                    <h3 class="product-title">Razr+ 2023 5G</h3>
+                    <div class="product-specs">8GB/256GB • 3.6" Cover Display • Snapdragon 8+ Gen 1</div>
+                    <div class="product-price">MWK 1,799,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 28 - ASUS ROG Phone -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge exclusive">GAMING</div>
+                <div class="product-image">
+                    <img src="../images/asus-rog-phone7.jpg" alt="ASUS ROG Phone 7 Ultimate" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">ASUS</div>
+                    <h3 class="product-title">ROG Phone 7 Ultimate</h3>
+                    <div class="product-specs">16GB/512GB • Snapdragon 8 Gen 2 • 165Hz AMOLED</div>
+                    <div class="product-price">MWK 1,999,999</div>
+                    <div class="product-exclusive">AeroActive Cooler 7 Included</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 29 - RedMagic Phone -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge discount">-10% OFF</div>
+                <div class="product-image">
+                    <img src="../images/redmagic-8-pro.jpg" alt="RedMagic 8 Pro" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">REDMAGIC</div>
+                    <h3 class="product-title">8 Pro Gaming Phone</h3>
+                    <div class="product-specs">12GB/256GB • Under Display Camera • 960Hz Touch Sampling</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 1,499,999</span>
+                        MWK 1,349,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 30 - Nokia G42 -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/nokia-g42.jpg" alt="Nokia G42 5G" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">NOKIA</div>
+                    <h3 class="product-title">G42 5G</h3>
+                    <div class="product-specs">6GB/128GB • 50MP Camera • 2-Day Battery • Repairable Design</div>
+                    <div class="product-price">MWK 449,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 31 - MacBook Air -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge discount">-15% OFF</div>
+                <div class="product-image">
+                    <img src="../images/macbook-air-15.jpg" alt="Apple MacBook Air 15-inch M2" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">MacBook Air 15" M2</h3>
+                    <div class="product-specs">16GB/512GB • 8-core GPU • Liquid Retina Display • Midnight</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 2,999,999</span>
+                        MWK 2,549,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 32 - Acer Predator -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge exclusive">GAMING</div>
+                <div class="product-image">
+                    <img src="../images/acer-predator-helios.jpg" alt="Acer Predator Helios 16" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">ACER</div>
+                    <h3 class="product-title">Predator Helios 16</h3>
+                    <div class="product-specs">32GB/2TB • i9 • RTX 4080 • 240Hz Mini LED • RGB Keyboard</div>
+                    <div class="product-price">MWK 4,499,999</div>
+                    <div class="product-exclusive">Advanced Cooling System</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 33 - MSI Stealth -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/msi-stealth-14.jpg" alt="MSI Stealth 14 Studio" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">MSI</div>
+                    <h3 class="product-title">Stealth 14 Studio</h3>
+                    <div class="product-specs">32GB/1TB • i7 • RTX 4060 • 14" QHD+ 165Hz • Moonlight White</div>
+                    <div class="product-price">MWK 3,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 34 - Razer Blade -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge exclusive">ULTIMATE</div>
+                <div class="product-image">
+                    <img src="../images/razer-blade-16.jpg" alt="Razer Blade 16" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">RAZER</div>
+                    <h3 class="product-title">Blade 16 Gaming Laptop</h3>
+                    <div class="product-specs">64GB/4TB • i9 • RTX 4090 • Dual Mode Mini-LED • Mercury</div>
+                    <div class="product-price">MWK 7,999,999</div>
+                    <div class="product-exclusive">CNC Aluminum Unibody</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 35 - LG Gram -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge exclusive">ULTRA-LIGHT</div>
+                <div class="product-image">
+                    <img src="../images/lg-gram-17.jpg" alt="LG Gram 17" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">LG</div>
+                    <h3 class="product-title">Gram 17 2023</h3>
+                    <div class="product-specs">16GB/1TB • i7 • Iris Xe • 17" WQXGA • 1.35kg Weight</div>
+                    <div class="product-price">MWK 2,899,999</div>
+                    <div class="product-exclusive">World's Lightest 17" Laptop</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 36 - Microsoft Surface Pro -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/surface-pro-9.jpg" alt="Microsoft Surface Pro 9" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">MICROSOFT</div>
+                    <h3 class="product-title">Surface Pro 9</h3>
+                    <div class="product-specs">16GB/256GB • SQ3 • 13" PixelSense • Sapphire • Keyboard Included</div>
+                    <div class="product-price">MWK 2,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 37 - Mac Mini -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge discount">-20% OFF</div>
+                <div class="product-image">
+                    <img src="../images/mac-mini-m2-pro.jpg" alt="Apple Mac Mini M2 Pro" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">Mac Mini M2 Pro</h3>
+                    <div class="product-specs">32GB/1TB • M2 Pro • 12-core CPU • 19-core GPU • Space Gray</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 3,000,000</span>
+                        MWK 2,399,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 38 - Intel NUC -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge exclusive">MINI PC</div>
+                <div class="product-image">
+                    <img src="../images/intel-nuc-extreme.jpg" alt="Intel NUC 13 Extreme" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">INTEL</div>
+                    <h3 class="product-title">NUC 13 Extreme Kit</h3>
+                    <div class="product-specs">32GB/2TB • i9 • RTX 4070 • 12x13cm • Compute Element</div>
+                    <div class="product-price">MWK 2,999,999</div>
+                    <div class="product-exclusive">Compact Gaming PC</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 39 - Corsair One -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge exclusive">PREMIUM</div>
+                <div class="product-image">
+                    <img src="../images/corsair-one-a200.jpg" alt="Corsair One A200" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">CORSAIR</div>
+                    <h3 class="product-title">One A200 Compact PC</h3>
+                    <div class="product-specs">64GB/2TB • Ryzen 9 • RTX 4080 • Liquid Cooled • 12L Chassis</div>
+                    <div class="product-price">MWK 5,499,999</div>
+                    <div class="product-exclusive">Advanced Liquid Cooling</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 40 - Apple Studio Display -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/apple-studio-display.jpg" alt="Apple Studio Display" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">Studio Display</h3>
+                    <div class="product-specs">27" 5K Retina • Nano-texture • A13 Chip • 12MP Camera • Tilt Adjust</div>
+                    <div class="product-price">MWK 2,199,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 41 - Samsung Odyssey -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge exclusive">GAMING</div>
+                <div class="product-image">
+                    <img src="../images/samsung-odyssey-g9.jpg" alt="Samsung Odyssey G9 Monitor" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-title">Odyssey G9 49"</h3>
+                    <div class="product-specs">Dual QHD • 240Hz • 1ms • 1000R Curve • Quantum HDR2000</div>
+                    <div class="product-price">MWK 1,799,999</div>
+                    <div class="product-exclusive">Ultimate Gaming Monitor</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 42 - LG UltraFine -->
+            <div class="product-card" data-category="desktops">
+                <div class="product-badge discount">-15% OFF</div>
+                <div class="product-image">
+                    <img src="../images/lg-ultrafine-5k.jpg" alt="LG UltraFine 5K Display" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">LG</div>
+                    <h3 class="product-title">UltraFine 5K Display</h3>
+                    <div class="product-specs">27" 5K • Thunderbolt 3 • 500 nits • P3 Color • Webcam</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 1,500,000</span>
+                        MWK 1,274,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 43 - Fossil Watch -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/fossil-gen6.jpg" alt="Fossil Gen 6 Wellness Edition" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">FOSSIL</div>
+                    <h3 class="product-title">Gen 6 Wellness Edition</h3>
+                    <div class="product-specs">44mm • Snapdragon 4100+ • SPO2 • Heart Rate • Black Silicone</div>
+                    <div class="product-price">MWK 349,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 44 - Fitbit Sense -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge discount">-30% OFF</div>
+                <div class="product-image">
+                    <img src="../images/fitbit-sense2.jpg" alt="Fitbit Sense 2" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">FITBIT</div>
+                    <h3 class="product-title">Sense 2 Advanced Health</h3>
+                    <div class="product-specs">40mm • ECG • EDA Scan • 6+ Day Battery • Stress Management</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 599,999</span>
+                        MWK 419,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 45 - Bose QuietComfort -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge exclusive">PREMIUM</div>
+                <div class="product-image">
+                    <img src="../images/bose-quietcomfort-ultra.jpg" alt="Bose QuietComfort Ultra Headphones" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">BOSE</div>
+                    <h3 class="product-title">QuietComfort Ultra</h3>
+                    <div class="product-specs">Immersive Audio • CustomTune • 24hr Battery • Noise Cancelling</div>
+                    <div class="product-price">MWK 999,999</div>
+                    <div class="product-exclusive">World's Best Noise Cancelling</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 46 - Sony WH-1000XM5 -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/sony-wh1000xm5.jpg" alt="Sony WH-1000XM5 Headphones" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SONY</div>
+                    <h3 class="product-title">WH-1000XM5 Wireless</h3>
+                    <div class="product-specs">30hr Battery • 8 Mics • Auto NC • Multipoint • Hi-Res Audio</div>
+                    <div class="product-price">MWK 849,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 47 - JBL Flip -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge discount">-25% OFF</div>
+                <div class="product-image">
+                    <img src="../images/jbl-flip6.jpg" alt="JBL Flip 6 Portable Speaker" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">JBL</div>
+                    <h3 class="product-title">Flip 6 Portable Speaker</h3>
+                    <div class="product-specs">IP67 • 12hr Playtime • PartyBoost • Dual Drivers • Blue</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 249,999</span>
+                        MWK 187,499
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 48 - UE Boom -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge exclusive">OUTDOOR</div>
+                <div class="product-image">
+                    <img src="../images/ue-boom3.jpg" alt="Ultimate Ears BOOM 3" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">ULTIMATE EARS</div>
+                    <h3 class="product-title">BOOM 3 Portable Speaker</h3>
+                    <div class="product-specs">IP67 • 15hr • 360° Sound • Floatable • Magic Button • Lagoon</div>
+                    <div class="product-price">MWK 279,999</div>
+                    <div class="product-exclusive">Floats on Water</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 49 - Samsung Tab S9 -->
+            <div class="product-card" data-category="tablets">
+                <div class="product-badge new">ENTERTAINMENT</div>
+                <div class="product-image">
+                    <img src="../images/samsung-tab-s9-ultra.jpg" alt="Samsung Galaxy Tab S9 Ultra" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-title">Tab S9 Ultra 5G</h3>
+                    <div class="product-specs">14.6" • 12GB/512GB • S Pen • Snapdragon 8 Gen 2 • Gray</div>
+                    <div class="product-price">MWK 2,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 50 - iPad Pro -->
+            <div class="product-card" data-category="tablets">
+                <div class="product-badge exclusive">PRO</div>
+                <div class="product-image">
+                    <img src="../images/ipad-pro-12.9.jpg" alt="Apple iPad Pro 12.9-inch M2" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">iPad Pro 12.9" M2</h3>
+                    <div class="product-specs">16GB/1TB • Liquid Retina XDR • 5G • Face ID • Space Gray</div>
+                    <div class="product-price">MWK 3,199,999</div>
+                    <div class="product-exclusive">ProMotion 120Hz Display</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 51 - Microsoft Surface Duo -->
+            <div class="product-card" data-category="tablets">
+                <div class="product-badge discount">-40% OFF</div>
+                <div class="product-image">
+                    <img src="../images/surface-duo2.jpg" alt="Microsoft Surface Duo 2" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">MICROSOFT</div>
+                    <h3 class="product-title">Surface Duo 2 Dual Screen</h3>
+                    <div class="product-specs">8GB/256GB • Dual 5.8" OLED • Snapdragon 888 • Glacier</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 2,000,000</span>
+                        MWK 1,199,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 52 - Lenovo Tab -->
+            <div class="product-card" data-category="tablets">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/lenovo-tab-p12-pro.jpg" alt="Lenovo Tab P12 Pro" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">LENOVO</div>
+                    <h3 class="product-title">Tab P12 Pro</h3>
+                    <div class="product-specs">12.6" OLED • 8GB/256GB • Snapdragon 870 • Precision Pen 3</div>
+                    <div class="product-price">MWK 1,499,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 53 - Canon EOS R5 -->
+            <div class="product-card" data-category="cameras">
+                <div class="product-badge exclusive">PRO</div>
+                <div class="product-image">
+                    <img src="../images/canon-eos-r5.jpg" alt="Canon EOS R5 Mirrorless" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">CANON</div>
+                    <h3 class="product-title">EOS R5 Mirrorless Camera</h3>
+                    <div class="product-specs">45MP • 8K Video • IBIS • Dual Pixel CMOS II • Body Only</div>
+                    <div class="product-price">MWK 4,999,999</div>
+                    <div class="product-exclusive">Professional Photography</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 54 - Sony A7 IV -->
+            <div class="product-card" data-category="cameras">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/sony-a7iv.jpg" alt="Sony A7 IV Mirrorless" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SONY</div>
+                    <h3 class="product-title">A7 IV Full Frame</h3>
+                    <div class="product-specs">33MP • 4K60 • Real-time Tracking • 10fps • Body Only</div>
+                    <div class="product-price">MWK 3,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 55 - DJI Mini 4 Pro -->
+            <div class="product-card" data-category="drones">
+                <div class="product-badge exclusive">DRONE</div>
+                <div class="product-image">
+                    <img src="../images/dji-mini-4-pro.jpg" alt="DJI Mini 4 Pro Drone" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">DJI</div>
+                    <h3 class="product-title">Mini 4 Pro Fly More Combo</h3>
+                    <div class="product-specs">4K/60fps • 249g • Omnidirectional Sensing • 34min Flight</div>
+                    <div class="product-price">MWK 1,899,999</div>
+                    <div class="product-exclusive">Under 250g No Registration</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 56 - Oculus Quest 3 -->
+            <div class="product-card" data-category="vr">
+                <div class="product-badge new">ENTERTAINMENT</div>
+                <div class="product-image">
+                    <img src="../images/meta-quest3.jpg" alt="Meta Quest 3 VR Headset" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">META</div>
+                    <h3 class="product-title">Quest 3 128GB</h3>
+                    <div class="product-specs">Mixed Reality • Snapdragon XR2 • Pancake Lenses • 2hr Battery</div>
+                    <div class="product-price">MWK 899,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 57 - Playstation 5 -->
+            <div class="product-card" data-category="gaming">
+                <div class="product-badge discount">-10% OFF</div>
+                <div class="product-image">
+                    <img src="../images/ps5-digital.jpg" alt="Sony PlayStation 5 Digital Edition" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SONY</div>
+                    <h3 class="product-title">PlayStation 5 Digital</h3>
+                    <div class="product-specs">825GB SSD • 4K/120fps • Ray Tracing • DualSense • White</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 1,199,999</span>
+                        MWK 1,079,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 58 - Xbox Series X -->
+            <div class="product-card" data-category="gaming">
+                <div class="product-badge exclusive">POWER</div>
+                <div class="product-image">
+                    <img src="../images/xbox-series-x.jpg" alt="Microsoft Xbox Series X" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">MICROSOFT</div>
+                    <h3 class="product-title">Xbox Series X 1TB</h3>
+                    <div class="product-specs">12 TFLOPS • 4K/120fps • Quick Resume • Game Pass • Black</div>
+                    <div class="product-price">MWK 1,149,999</div>
+                    <div class="product-exclusive">Most Powerful Console</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 59 - Nintendo Switch OLED -->
+            <div class="product-card" data-category="gaming">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/switch-oled.jpg" alt="Nintendo Switch OLED Model" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">NINTENDO</div>
+                    <h3 class="product-title">Switch OLED White</h3>
+                    <div class="product-specs">7" OLED • 64GB • Enhanced Audio • Wide Adjustable Stand</div>
+                    <div class="product-price">MWK 699,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 60 - Steam Deck -->
+            <div class="product-card" data-category="gaming">
+                <div class="product-badge exclusive">HANDHELD</div>
+                <div class="product-image">
+                    <img src="../images/steam-deck-oled.jpg" alt="Steam Deck OLED 1TB" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">STEAM</div>
+                    <h3 class="product-title">Steam Deck OLED 1TB</h3>
+                    <div class="product-specs">7.4" HDR OLED • Zen 2 • RDNA 2 • 12hr Battery • Smoked Black</div>
+                    <div class="product-price">MWK 1,099,999</div>
+                    <div class="product-exclusive">Entire Steam Library Portable</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 61 - ASUS Zenbook -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge discount">-18% OFF</div>
+                <div class="product-image">
+                    <img src="../images/asus-zenbook-14.jpg" alt="ASUS Zenbook 14 OLED" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">ASUS</div>
+                    <h3 class="product-title">Zenbook 14 OLED</h3>
+                    <div class="product-specs">16GB/512GB • Ryzen 7 • 2.8K OLED • NumberPad • Ponder Blue</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 1,799,999</span>
+                        MWK 1,475,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 62 - Huawei MateBook -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/huawei-matebook-x-pro.jpg" alt="Huawei MateBook X Pro" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">HUAWEI</div>
+                    <h3 class="product-title">MateBook X Pro 2023</h3>
+                    <div class="product-specs">16GB/1TB • i7 • 3.1K Touch • 90Hz • Emerald Green</div>
+                    <div class="product-price">MWK 2,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 63 - Honor MagicBook -->
+            <div class="product-card" data-category="laptops">
+                <div class="product-badge exclusive">VALUE</div>
+                <div class="product-image">
+                    <img src="../images/honor-magicbook-14.jpg" alt="Honor MagicBook 14" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">HONOR</div>
+                    <h3 class="product-title">MagicBook 14 2023</h3>
+                    <div class="product-specs">16GB/512GB • i5 • 2.5K • 75Wh Battery • Space Gray</div>
+                    <div class="product-price">MWK 1,299,999</div>
+                    <div class="product-exclusive">20hr Battery Life</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 64 - Realme GT Neo -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/realme-gt-neo5.jpg" alt="Realme GT Neo 5" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">REALME</div>
+                    <h3 class="product-title">GT Neo 5 240W</h3>
+                    <div class="product-specs">16GB/1TB • Snapdragon 8+ • 144Hz • 240W Charging • Purple</div>
+                    <div class="product-price">MWK 1,199,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 65 - Poco F5 -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge discount">-12% OFF</div>
+                <div class="product-image">
+                    <img src="../images/poco-f5-pro.jpg" alt="Poco F5 Pro" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">POCO</div>
+                    <h3 class="product-title">F5 Pro 5G</h3>
+                    <div class="product-specs">12GB/256GB • Snapdragon 8+ • 2K AMOLED • 67W • White</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 999,999</span>
+                        MWK 879,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 66 - Vivo X90 Pro -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge exclusive">CAMERA</div>
+                <div class="product-image">
+                    <img src="../images/vivo-x90-pro.jpg" alt="Vivo X90 Pro" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">VIVO</div>
+                    <h3 class="product-title">X90 Pro 5G</h3>
+                    <div class="product-specs">12GB/512GB • Zeiss Optics • MediaTek 9200 • 120W • Black</div>
+                    <div class="product-price">MWK 1,699,999</div>
+                    <div class="product-exclusive">Zeiss Professional Imaging</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 67 - Oppo Find N3 -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge exclusive">FOLDABLE</div>
+                <div class="product-image">
+                    <img src="../images/oppo-find-n3.jpg" alt="Oppo Find N3 Fold" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">OPPO</div>
+                    <h3 class="product-title">Find N3 Fold 5G</h3>
+                    <div class="product-specs">16GB/1TB • 7.8" Foldable • Hasselblad • 67W • Cream Gold</div>
+                    <div class="product-price">MWK 2,799,999</div>
+                    <div class="product-exclusive">Book-style Foldable</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 68 - Tecno Phantom -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/tecno-phantom-v-fold.jpg" alt="Tecno Phantom V Fold" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">TECNO</div>
+                    <h3 class="product-title">Phantom V Fold 5G</h3>
+                    <div class="product-specs">12GB/512GB • MediaTek 9000+ • 7.85" • 45W • Black</div>
+                    <div class="product-price">MWK 1,499,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 69 - Infinix Zero -->
+            <div class="product-card" data-category="phones">
+                <div class="product-badge exclusive">GAMING</div>
+                <div class="product-image">
+                    <img src="../images/infinix-zero-ultra.jpg" alt="Infinix Zero 30 Ultra" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">INFINIX</div>
+                    <h3 class="product-title">Zero 30 Ultra 5G</h3>
+                    <div class="product-specs">12GB/512GB • Dimensity 8020 • 108MP OIS • 68W • Gold</div>
+                    <div class="product-price">MWK 899,999</div>
+                    <div class="product-exclusive">MediaTek Gaming Technology</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 70 - Apple TV 4K -->
+            <div class="product-card" data-category="tv">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/apple-tv-4k.jpg" alt="Apple TV 4K 2023" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">APPLE</div>
+                    <h3 class="product-title">Apple TV 4K 128GB</h3>
+                    <div class="product-specs">A15 Bionic • HDR10+ • Dolby Vision • Thread • Siri Remote</div>
+                    <div class="product-price">MWK 499,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 71 - Samsung Frame TV -->
+            <div class="product-card" data-category="tv">
+                <div class="product-badge exclusive">ART</div>
+                <div class="product-image">
+                    <img src="../images/samsung-frame-65.jpg" alt="Samsung The Frame 65-inch" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-title">The Frame 65" 4K</h3>
+                    <div class="product-specs">Art Mode • Matte Display • One Connect • Bezel Customization</div>
+                    <div class="product-price">MWK 2,999,999</div>
+                    <div class="product-exclusive">Transforms into Art When Off</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 72 - LG OLED C3 -->
+            <div class="product-card" data-category="tv">
+                <div class="product-badge discount">-22% OFF</div>
+                <div class="product-image">
+                    <img src="../images/lg-oled-c3-77.jpg" alt="LG OLED C3 77-inch" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">LG</div>
+                    <h3 class="product-title">OLED evo C3 77" 4K</h3>
+                    <div class="product-specs">α9 Gen6 • 120Hz • G-Sync • Dolby Vision • WebOS 23</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 5,500,000</span>
+                        MWK 4,289,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 73 - Sony Bravia -->
+            <div class="product-card" data-category="tv">
+                <div class="product-badge exclusive">PREMIUM</div>
+                <div class="product-image">
+                    <img src="../images/sony-bravia-a95l.jpg" alt="Sony Bravia A95L QD-OLED" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SONY</div>
+                    <h3 class="product-title">Bravia A95L 65" QD-OLED</h3>
+                    <div class="product-specs">Cognitive Processor XR • Acoustic Surface Audio+ • 4K/120</div>
+                    <div class="product-price">MWK 4,999,999</div>
+                    <div class="product-exclusive">Best-in-class Picture Quality</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 74 - TCL Mini-LED -->
+            <div class="product-card" data-category="tv">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/tcl-c845.jpg" alt="TCL C845 Mini-LED" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">TCL</div>
+                    <h3 class="product-title">C845 75" Mini-LED 4K</h3>
+                    <div class="product-specs">2000 nits • 144Hz • Onkyo 2.1 • Google TV • Premium Remote</div>
+                    <div class="product-price">MWK 2,199,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 75 - Hisense ULED -->
+            <div class="product-card" data-category="tv">
+                <div class="product-badge discount">-30% OFF</div>
+                <div class="product-image">
+                    <img src="../images/hisense-u8k.jpg" alt="Hisense U8K Mini-LED" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">HISENSE</div>
+                    <h3 class="product-title">U8K 85" Mini-LED 4K</h3>
+                    <div class="product-specs">3000 nits • 144Hz • Quantum Dot • IMAX Enhanced • Black</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 3,500,000</span>
+                        MWK 2,449,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 76 - Beats Studio Pro -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/beats-studio-pro.jpg" alt="Beats Studio Pro Wireless" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">BEATS</div>
+                    <h3 class="product-title">Studio Pro Wireless</h3>
+                    <div class="product-specs">40hr Battery • Spatial Audio • ANC • Transparency • Navy</div>
+                    <div class="product-price">MWK 699,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 77 - Jabra Elite -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge exclusive">BUSINESS</div>
+                <div class="product-image">
+                    <img src="../images/jabra-elite-85h.jpg" alt="Jabra Elite 85h Headphones" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">JABRA</div>
+                    <h3 class="product-title">Elite 85h ANC</h3>
+                    <div class="product-specs">SmartSound • 36hr Battery • 8 Mics • Tile • Titanium Black</div>
+                    <div class="product-price">MWK 599,999</div>
+                    <div class="product-exclusive">Best for Business Calls</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 78 - Samsung Soundbar -->
+            <div class="product-card" data-category="audio">
+                <div class="product-badge exclusive">IMMERSIVE</div>
+                <div class="product-image">
+                    <img src="../images/samsung-hw-q990c.jpg" alt="Samsung HW-Q990C Soundbar" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-title">HW-Q990C 11.1.4ch</h3>
+                    <div class="product-specs">Dolby Atmos • Wireless Rear • SpaceFit Sound • 22 Speakers</div>
+                    <div class="product-price">MWK 1,499,999</div>
+                    <div class="product-exclusive">True Cinema Experience</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 79 - Sonos Arc -->
+            <div class="product-card" data-category="audio">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/sonos-arc.jpg" alt="Sonos Arc Soundbar" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SONOS</div>
+                    <h3 class="product-title">Arc Dolby Atmos Soundbar</h3>
+                    <div class="product-specs">11 Drivers • Trueplay • Voice Control • Apple AirPlay 2 • Black</div>
+                    <div class="product-price">MWK 1,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 80 - Bose SoundLink -->
+            <div class="product-card" data-category="audio">
+                <div class="product-badge discount">-20% OFF</div>
+                <div class="product-image">
+                    <img src="../images/bose-soundlink-flex.jpg" alt="Bose SoundLink Flex Bluetooth Speaker" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">BOSE</div>
+                    <h3 class="product-title">SoundLink Flex Portable</h3>
+                    <div class="product-specs">IP67 • 12hr • PositionIQ • Party Mode • Stone Blue</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 349,999</span>
+                        MWK 279,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 81 - Nintendo 3DS -->
+            <div class="product-card" data-category="gaming">
+                <div class="product-badge exclusive">RETRO</div>
+                <div class="product-image">
+                    <img src="../images/nintendo-3ds-xl.jpg" alt="Nintendo 3DS XL" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">NINTENDO</div>
+                    <h3 class="product-title">3DS XL Limited Edition</h3>
+                    <div class="product-specs">4.88" Top Screen • 3D Without Glasses • Backward Compatible</div>
+                    <div class="product-price">MWK 349,999</div>
+                    <div class="product-exclusive">Retro Gaming Collectible</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 82 - Playstation VR2 -->
+            <div class="product-card" data-category="vr">
+                <div class="product-badge new">FUN</div>
+                <div class="product-image">
+                    <img src="../images/psvr2.jpg" alt="PlayStation VR2 Headset" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SONY</div>
+                    <h3 class="product-title">PlayStation VR2</h3>
+                    <div class="product-specs">4K HDR • Eye Tracking • Haptic Feedback • 110° FOV</div>
+                    <div class="product-price">MWK 1,299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 83 - GoPro Hero12 -->
+            <div class="product-card" data-category="cameras">
+                <div class="product-badge exclusive">GOPRO</div>
+                <div class="product-image">
+                    <img src="../images/gopro-hero12.jpg" alt="GoPro Hero12 Black" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">GOPRO</div>
+                    <h3 class="product-title">Hero12 Black Creator Edition</h3>
+                    <div class="product-specs">5.3K/60 • HyperSmooth 6.0 • HDR • 10m Waterproof • Max Lens 2.0</div>
+                    <div class="product-price">MWK 699,999</div>
+                    <div class="product-exclusive">Ultimate Action Camera</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 84 - Insta360 X3 -->
+            <div class="product-card" data-category="cameras">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/insta360-x3.jpg" alt="Insta360 X3 360 Camera" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">INSTA360</div>
+                    <h3 class="product-title">X3 360 Degree Camera</h3>
+                    <div class="product-specs">5.7K 360 • FlowState Stabilization • 72MP • 2.29" Touch • Aqua</div>
+                    <div class="product-price">MWK 549,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 85 - Kindle Paperwhite -->
+            <div class="product-card" data-category="ebook">
+                <div class="product-badge exclusive">READING</div>
+                <div class="product-image">
+                    <img src="../images/kindle-paperwhite-signature.jpg" alt="Kindle Paperwhite Signature" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">AMAZON</div>
+                    <h3 class="product-title">Kindle Paperwhite Signature</h3>
+                    <div class="product-specs">6.8" • 32GB • Auto Light • Wireless Charging • No Ads • Black</div>
+                    <div class="product-price">MWK 299,999</div>
+                    <div class="product-exclusive">Perfect for Book Lovers</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 86 - Kobo Libra 2 -->
+            <div class="product-card" data-category="ebook">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/kobo-libra2.jpg" alt="Kobo Libra 2 E-reader" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">KOBO</div>
+                    <h3 class="product-title">Libra 2 7" E-reader</h3>
+                    <div class="product-specs">32GB • ComfortLight PRO • Waterproof • OverDrive • White</div>
+                    <div class="product-price">MWK 279,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 87 - Razer Viper -->
+            <div class="product-card" data-category="gaming">
+                <div class="product-badge exclusive">ESPORTS</div>
+                <div class="product-image">
+                    <img src="../images/razer-viper-v2-pro.jpg" alt="Razer Viper V2 Pro Mouse" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">RAZER</div>
+                    <h3 class="product-title">Viper V2 Pro Wireless</h3>
+                    <div class="product-specs">Focus Pro 30K • 59g • Optical Switches • 80hr • HyperSpeed</div>
+                    <div class="product-price">MWK 199,999</div>
+                    <div class="product-exclusive">Used by Esports Pros</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 88 - SteelSeries Apex -->
+            <div class="product-card" data-category="gaming">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/steelseries-apex-pro.jpg" alt="SteelSeries Apex Pro Keyboard" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">STEELSERIES</div>
+                    <h3 class="product-title">Apex Pro TKL Wireless</h3>
+                    <div class="product-specs">Adjustable Actuation • OLED Display • Multi-Device • Black</div>
+                    <div class="product-price">MWK 249,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 89 - Corsair K100 -->
+            <div class="product-card" data-category="gaming">
+                <div class="product-badge exclusive">PREMIUM</div>
+                <div class="product-image">
+                    <img src="../images/corsair-k100.jpg" alt="Corsair K100 RGB Keyboard" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">CORSAIR</div>
+                    <h3 class="product-title">K100 RGB Optical-Mechanical</h3>
+                    <div class="product-specs">OPX Switches • 4000Hz • iCUE Control Wheel • 44-Zone RGB</div>
+                    <div class="product-price">MWK 299,999</div>
+                    <div class="product-exclusive">Corsair's Flagship Keyboard</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 90 - Logitech G Pro -->
+            <div class="product-card" data-category="gaming">
+                <div class="product-badge exclusive">PRO</div>
+                <div class="product-image">
+                    <img src="../images/logitech-g-pro-x.jpg" alt="Logitech G Pro X Wireless Headset" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">LOGITECH</div>
+                    <h3 class="product-title">G Pro X Wireless LIGHTSPEED</h3>
+                    <div class="product-specs">PRO-G 50mm • DTS Headphone:X 2.0 • 20+ Hours • Blue VO!CE</div>
+                    <div class="product-price">MWK 349,999</div>
+                    <div class="product-exclusive">Tournament Grade Audio</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 91 - WD Black SSD -->
+            <div class="product-card" data-category="storage">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/wd-black-sn850x.jpg" alt="WD Black SN850X NVMe SSD" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">WESTERN DIGITAL</div>
+                    <h3 class="product-title">WD Black SN850X 4TB</h3>
+                    <div class="product-specs">PCIe Gen4 • 7300MB/s • Heatsink • Gaming Mode 2.0 • PS5 Compatible</div>
+                    <div class="product-price">MWK 599,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 92 - Samsung 990 Pro -->
+            <div class="product-card" data-category="storage">
+                <div class="product-badge exclusive">PERFORMANCE</div>
+            <div class="product-image">
+                    <img src="../images/samsung-990-pro.jpg" alt="Samsung 990 Pro SSD" class="product-img">
+            </div>
+                <div class="product-content">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-title">990 Pro 2TB with Heatsink</h3>
+                    <div class="product-specs">7450MB/s • PCIe 4.0 • Nickel-Coated Controller • PS5 Optimized</div>
+                    <div class="product-price">MWK 399,999</div>
+                    <div class="product-exclusive">World's Fastest PCIe 4.0 SSD</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 93 - Seagate Expansion -->
+            <div class="product-card" data-category="storage">
+                <div class="product-badge discount">-25% OFF</div>
+                <div class="product-image">
+                    <img src="../images/seagate-expansion-16tb.jpg" alt="Seagate Expansion 16TB External HDD" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SEAGATE</div>
+                    <h3 class="product-title">Expansion 16TB Desktop HDD</h3>
+                    <div class="product-specs">USB 3.0 • Plug & Play • PC & Mac • 3-Year Warranty • Black</div>
+                    <div class="product-price">
+                        <span class="old-price">MWK 499,999</span>
+                        MWK 374,999
+                    </div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 94 - LaCie Rugged -->
+            <div class="product-card" data-category="storage">
+                <div class="product-badge exclusive">DURABLE</div>
+                <div class="product-image">
+                    <img src="../images/lacie-rugged-5tb.jpg" alt="LaCie Rugged USB-C 5TB" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">LACIE</div>
+                    <h3 class="product-title">Rugged USB-C 5TB</h3>
+                    <div class="product-specs">Drop Shock Dust Rain Resistant • USB 3.0 • 3yr Data Recovery</div>
+                    <div class="product-price">MWK 349,999</div>
+                    <div class="product-exclusive">Built for Adventure</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 95 - SanDisk Extreme -->
+            <div class="product-card" data-category="storage">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/sandisk-extreme-pro.jpg" alt="SanDisk Extreme Pro SD Card" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SANDISK</div>
+                    <h3 class="product-title">Extreme Pro 1TB SDXC</h3>
+                    <div class="product-specs">V90 • UHS-II • 300MB/s Write • 4K/8K Video • RescuePro</div>
+                    <div class="product-price">MWK 299,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 96 - Belkin BoostCharge -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge exclusive">3-in-1</div>
+                <div class="product-image">
+                    <img src="../images/belkin-boostcharge-pro.jpg" alt="Belkin BoostCharge Pro 3-in-1" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">BELKIN</div>
+                    <h3 class="product-title">BoostCharge Pro 3-in-1</h3>
+                    <div class="product-specs">MagSafe • Fast Watch Charging • AirPods • 15W • White</div>
+                    <div class="product-price">MWK 199,999</div>
+                    <div class="product-exclusive">Official MagSafe Charger</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 97 - Twelve South -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/twelvesouth-hirise.jpg" alt="Twelve South HiRise 3 Deluxe" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">TWELVE SOUTH</div>
+                    <h3 class="product-title">HiRise 3 Deluxe Stand</h3>
+                    <div class="product-specs">MacBook Stand • Height Adjustable • Cable Management • Space Gray</div>
+                    <div class="product-price">MWK 149,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 98 - Satechi Hub -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge exclusive">HUB</div>
+                <div class="product-image">
+                    <img src="../images/satechi-usb4-hub.jpg" alt="Satechi USB4 Multiport Hub" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">SATECHI</div>
+                    <h3 class="product-title">USB4 Multiport Hub 8-in-1</h3>
+                    <div class="product-specs">4K@60Hz • 100W PD • SD/Micro • USB-A • Ethernet • Space Gray</div>
+                    <div class="product-price">MWK 179,999</div>
+                    <div class="product-exclusive">Ultimate Connectivity Hub</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 99 - CalDigit TS4 -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge exclusive">THUNDERBOLT</div>
+                <div class="product-image">
+                    <img src="../images/caldigit-ts4.jpg" alt="CalDigit TS4 Thunderbolt 4 Dock" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">CALDIGIT</div>
+                    <h3 class="product-title">TS4 Thunderbolt 4 Dock</h3>
+                    <div class="product-specs">18 Ports • 98W Charging • Dual 8K • 10GbE • SD 4.0 • Silver</div>
+                    <div class="product-price">MWK 449,999</div>
+                    <div class="product-exclusive">Most Complete Thunderbolt Dock</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 100 - Nomad Base -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-badge new">NEW</div>
+                <div class="product-image">
+                    <img src="../images/nomad-base-one.jpg" alt="Nomad Base One MagSafe" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-brand">NOMAD</div>
+                    <h3 class="product-title">Base One MagSafe Stand</h3>
+                    <div class="product-specs">15W Fast Charge • Aluminum • Leather • Modernist Design • Black</div>
+                    <div class="product-price">MWK 129,999</div>
+                    <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 
@@ -69,27 +1673,43 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
+                    <img src="images/logo/footer-logo.png" alt="Last Resorts Logo" class="footer-logo">
                     <h3>Last Resorts</h3>
-                    <p>Computers & Electronics</p>
+                    <p>Your Tech Partner in Malawi</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/images/facebook-icon.png" alt="Facebook"> Facebook</a>
+                        <a href="#"><img src="/images/instagram-icon.png" alt="Instagram"> Instagram</a>
+                        <a href="#"><img src="/images/linkedin-icon.png" alt="LinkedIn"> LinkedIn</a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="pages/tutorials-login.html">Tutorials</a></li>
-                        <li><a href="../index.html#about">About</a></li>
-                        <li><a href="admin-login.html">Admin Dashboard</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="pages/products.html">Products</a></li>
+                        <li><a href="pages/repair-services.html">Repair Services</a></li>
+                        <li><a href="pages/tutorials.html">Tutorials</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/admin-login.html">Admin Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                        <li><a href="pages/repair-services.html">Repair Services</a></li>
+                        <li><a href="pages/warranty.html">Warranty Info</a></li>
+                        <li><a href="pages/shipping.html">Shipping Policy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Last Resorts Computer and Electronics. All rights reserved.</p>
+                <p>&copy; 2026 Last Resorts Computer and Electronics. All rights reserved. | Quality Tech Solutions in Malawi</p>
             </div>
         </div>
     </footer>
 
-    <script src="../js/products.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
 </body>
 </html>

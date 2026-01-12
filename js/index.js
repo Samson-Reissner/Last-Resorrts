@@ -1,170 +1,8 @@
-// Extensive product database with 50+ products
-const featuredProducts = [
-    // Premium Phones (15 products)
-    {
-        id: 1,
-        name: "iPhone 15 Pro Max 1TB",
-        brand: "APPLE",
-        category: "phones",
-        price: "MWK 2,800,000",
-        oldPrice: "MWK 3,200,000",
-        specs: "6.7\" Super Retina, A17 Pro, 1TB, Titanium",
-        image: "📱",
-        badge: "exclusive",
-        exclusive: "Only at Last Resorts - Limited Stock!"
-    },
-    {
-        id: 2,
-        name: "Samsung Galaxy S24 Ultra",
-        brand: "SAMSUNG",
-        category: "phones",
-        price: "MWK 1,950,000",
-        specs: "6.8\" Dynamic AMOLED, Snapdragon 8 Gen 3, 512GB",
-        image: "📱",
-        badge: "new",
-        exclusive: "Only at Last Resorts - AI Powered!"
-    },
-    {
-        id: 3,
-        name: "Google Pixel 8 Pro",
-        brand: "GOOGLE",
-        category: "phones",
-        price: "MWK 1,650,000",
-        specs: "6.7\" OLED, Tensor G3, 12GB RAM, 256GB",
-        image: "📱",
-        badge: "discount",
-        exclusive: "Only at Last Resorts - Best Camera!"
-    },
-    {
-        id: 4,
-        name: "OnePlus 12",
-        brand: "ONEPLUS",
-        category: "phones",
-        price: "MWK 1,200,000",
-        specs: "6.82\" LTPO, Snapdragon 8 Gen 3, 16GB RAM",
-        image: "📱",
-        badge: "new"
-    },
-    {
-        id: 5,
-        name: "Xiaomi 14 Ultra",
-        brand: "XIAOMI",
-        category: "phones",
-        price: "MWK 1,350,000",
-        specs: "6.73\" LTPO, Snapdragon 8 Gen 3, 1-inch Sensor",
-        image: "📱",
-        badge: "exclusive"
-    },
+// ==============================================
+// DELETE EVERYTHING ABOVE THIS LINE AND REPLACE WITH:
+// ==============================================
 
-    // Premium Laptops (15 products)
-    {
-        id: 6,
-        name: "MacBook Pro 16\" M3 Max",
-        brand: "APPLE",
-        category: "laptops",
-        price: "MWK 5,200,000",
-        specs: "M3 Max, 48GB RAM, 2TB SSD, Liquid Retina XDR",
-        image: "💻",
-        badge: "exclusive",
-        exclusive: "Only at Last Resorts - Professional Grade!"
-    },
-    {
-        id: 7,
-        name: "Dell XPS 15 9530",
-        brand: "DELL",
-        category: "laptops",
-        price: "MWK 2,800,000",
-        specs: "Intel i9, RTX 4070, 32GB RAM, 1TB SSD, OLED",
-        image: "💻",
-        badge: "new"
-    },
-    {
-        id: 8,
-        name: "Lenovo ThinkPad X1 Carbon",
-        brand: "LENOVO",
-        category: "laptops",
-        price: "MWK 2,100,000",
-        specs: "Intel i7, 16GB RAM, 1TB SSD, 14\" 2.8K OLED",
-        image: "💻",
-        badge: "discount"
-    },
-    {
-        id: 9,
-        name: "HP Spectre x360 14",
-        brand: "HP",
-        category: "laptops",
-        price: "MWK 1,950,000",
-        specs: "Intel i7, 16GB RAM, 1TB SSD, 13.5\" OLED 2-in-1",
-        image: "💻",
-        badge: "exclusive"
-    },
-    {
-        id: 10,
-        name: "ASUS ROG Zephyrus G16",
-        brand: "ASUS",
-        category: "laptops",
-        price: "MWK 3,500,000",
-        specs: "Intel i9, RTX 4090, 32GB RAM, 2TB SSD, 240Hz",
-        image: "💻",
-        badge: "new"
-    },
-
-    // Desktops & Workstations (10 products)
-    {
-        id: 11,
-        name: "Apple iMac 24\" M3",
-        brand: "APPLE",
-        category: "desktops",
-        price: "MWK 3,200,000",
-        specs: "M3 Chip, 16GB RAM, 1TB SSD, 4.5K Retina",
-        image: "🖥️",
-        badge: "exclusive"
-    },
-    {
-        id: 12,
-        name: "Dell Alienware Aurora R15",
-        brand: "DELL",
-        category: "desktops",
-        price: "MWK 4,800,000",
-        specs: "Intel i9, RTX 4090, 64GB RAM, 2TB SSD + 4TB HDD",
-        image: "🖥️",
-        badge: "new"
-    },
-
-    // Accessories (10 products)
-    {
-        id: 13,
-        name: "Apple AirPods Pro 2",
-        brand: "APPLE",
-        category: "accessories",
-        price: "MWK 450,000",
-        specs: "Active Noise Cancellation, Spatial Audio, MagSafe",
-        image: "🎧",
-        badge: "discount"
-    },
-    {
-        id: 14,
-        name: "Samsung Galaxy Watch6",
-        brand: "SAMSUNG",
-        category: "accessories",
-        price: "MWK 350,000",
-        specs: "44mm, LTE, Health Monitoring, Rotating Bezel",
-        image: "⌚",
-        badge: "new"
-    },
-    {
-        id: 15,
-        name: "Logitech MX Master 3S",
-        brand: "LOGITECH",
-        category: "accessories",
-        price: "MWK 120,000",
-        specs: "Wireless, 8K DPI, Ergonomic, Multi-Device",
-        image: "🖱️",
-        badge: "exclusive"
-    }
-];
-
-// Tutorials database
+// Tutorials database ONLY - NO PRODUCTS
 const tutorials = [
     {
         id: 1,
@@ -208,55 +46,170 @@ const tutorials = [
     }
 ];
 
-// DOM Content Loaded
+// ==============================================
+// DOM CONTENT LOADED - NO PRODUCT LOADING
+// ==============================================
 document.addEventListener('DOMContentLoaded', function() {
-    loadFeaturedProducts();
-    loadTutorialsPreview();
+    console.log('✅ Static HTML products loaded - NO JS PRODUCT LOADING');
+    
+    // Initialize cart buttons for your static HTML products
+    initializeAddToCartButtons();
     updateCartCount();
+    
+    // Optional: Load tutorials if you have that section
+    if (document.getElementById('tutorials-preview')) {
+        loadTutorialsPreview();
+    }
+    
+    // CRITICAL: Remove any existing product loading
+    disableProductLoading();
 });
 
-function loadFeaturedProducts() {
-    const productsGrid = document.getElementById('featured-products-grid');
+// ==============================================
+// CRITICAL FUNCTION: Disable all product loading
+// ==============================================
+function disableProductLoading() {
+    console.log('🚫 Disabling all product loading functions');
     
-    // Shuffle and get 12 random products
-    const shuffledProducts = [...featuredProducts].sort(() => 0.5 - Math.random());
-    const selectedProducts = shuffledProducts.slice(0, 12);
-    
-    productsGrid.innerHTML = selectedProducts.map(product => `
-        <div class="product-card">
-            ${product.badge ? `<div class="product-badge ${product.badge}">${getBadgeText(product.badge)}</div>` : ''}
-            <div class="product-image">
-                <span>${product.image}</span>
-            </div>
-            <div class="product-content">
-                <div class="product-brand">${product.brand}</div>
-                <h3 class="product-title">${product.name}</h3>
-                <div class="product-specs">${product.specs}</div>
-                ${product.exclusive ? `<div class="product-exclusive">${product.exclusive}</div>` : ''}
-                <div class="product-price">
-                    ${product.oldPrice ? `<span class="old-price">${product.oldPrice}</span>` : ''}
-                    ${product.price}
-                </div>
-                <div class="product-actions">
-                    <button class="btn btn-primary" onclick="addToCart(${product.id})">Add to Cart</button>
-                    <button class="btn btn-outline" onclick="viewProduct(${product.id})">Quick View</button>
-                </div>
-            </div>
-        </div>
-    `).join('');
-}
-
-function getBadgeText(badgeType) {
-    const badges = {
-        'exclusive': '🔥 EXCLUSIVE',
-        'new': '🆕 NEW',
-        'discount': '💸 SALE'
+    // Override any existing loadFeaturedProducts function
+    window.loadFeaturedProducts = function() {
+        console.log('❌ PRODUCT LOADING BLOCKED: Using static HTML instead');
+        return false;
     };
-    return badges[badgeType] || '';
+    
+    // Also block other common product loading functions
+    window.loadProducts = function() {
+        console.log('❌ PRODUCT LOADING BLOCKED');
+        return false;
+    };
+    
+    // Find and stop any product grid modifications
+    const productGrids = document.querySelectorAll('.products-grid, .featured-products-grid');
+    productGrids.forEach(grid => {
+        // Add a marker to prevent JavaScript from modifying this grid
+        grid.setAttribute('data-js-blocked', 'true');
+    });
 }
 
+// ==============================================
+// Cart functionality for STATIC HTML products
+// ==============================================
+function initializeAddToCartButtons() {
+    console.log('🛒 Initializing cart buttons');
+    
+    const buttons = document.querySelectorAll('.btn-primary.btn-block, .btn-block');
+    console.log('Found', buttons.length, 'cart buttons');
+    
+    buttons.forEach(button => {
+        // Remove any existing click listeners
+        button.replaceWith(button.cloneNode(true));
+    });
+    
+    // Re-select buttons after cloning
+    const newButtons = document.querySelectorAll('.btn-primary.btn-block, .btn-block');
+    
+    newButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const productCard = this.closest('.product-card');
+            if (!productCard) return;
+            
+            const productName = productCard.querySelector('.product-title')?.textContent || 'Product';
+            
+            // Add to cart
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({
+                name: productName,
+                time: new Date(),
+                quantity: 1
+            });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Update cart count
+            updateCartCount();
+            
+            // Show notification
+            showNotification(`✅ Added "${productName}" to cart!`);
+        });
+    });
+}
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const countElement = document.getElementById('cart-count');
+    if (countElement) {
+        countElement.textContent = cart.length;
+        console.log('🛒 Cart updated:', cart.length, 'items');
+    }
+}
+
+// ==============================================
+// Notification system
+// ==============================================
+function showNotification(message) {
+    // Remove any existing notifications
+    const existingNotifications = document.querySelectorAll('.custom-notification');
+    existingNotifications.forEach(notif => notif.remove());
+    
+    // Create new notification
+    const notification = document.createElement('div');
+    notification.className = 'custom-notification';
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: linear-gradient(45deg, #4CAF50, #45a049);
+        color: white;
+        padding: 15px 25px;
+        border-radius: 8px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        z-index: 10000;
+        font-weight: bold;
+        border-left: 5px solid #2E7D32;
+        animation: slideInRight 0.3s ease-out;
+        max-width: 400px;
+        word-wrap: break-word;
+    `;
+    
+    // Add animation
+    if (!document.querySelector('#notification-styles')) {
+        const style = document.createElement('style');
+        style.id = 'notification-styles';
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    document.body.appendChild(notification);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.3s ease-in';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                document.body.removeChild(notification);
+            }
+        }, 300);
+    }, 3000);
+}
+
+// ==============================================
+// Tutorials functions (optional)
+// ==============================================
 function loadTutorialsPreview() {
     const tutorialsGrid = document.getElementById('tutorials-preview');
+    if (!tutorialsGrid) return;
     
     tutorialsGrid.innerHTML = tutorials.map(tutorial => `
         <div class="tutorial-preview-card">
@@ -286,35 +239,22 @@ function redirectToTutorials() {
     }
 }
 
-function viewProduct(productId) {
-    const product = featuredProducts.find(p => p.id === productId);
-    if (product) {
-        showNotification(`Quick view: ${product.name} - ${product.price}`);
-    }
-}
+// ==============================================
+// CRITICAL: Delete/Override old functions
+// ==============================================
 
-function showNotification(message) {
-    const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        background: var(--success);
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        box-shadow: var(--shadow);
-        z-index: 3000;
-        animation: slideIn 0.3s ease-out;
-    `;
-    notification.textContent = message;
-    
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.style.animation = 'slideOut 0.3s ease-in';
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    }, 3000);
-}
+// DELETE THIS - Override with empty function
+window.viewProduct = function() {
+    console.log('❌ viewProduct() disabled - using static HTML');
+    return false;
+};
+
+// DELETE THIS - Override with empty function  
+window.loadFeaturedProducts = function() {
+    console.log('❌ loadFeaturedProducts() disabled - using static HTML');
+    return false;
+};
+
+console.log('🚀 Static HTML Product System Initialized');
+console.log('📱 24 Static Products will display from HTML');
+console.log('🚫 JavaScript product loading is DISABLED');

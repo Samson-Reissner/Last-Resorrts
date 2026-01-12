@@ -6,50 +6,56 @@
     <title>Repair Services - Last Resorts</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/repair-services.css">
+    
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="../index.html" class="logo">Last Resorts</a>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="tutorials.html">Tutorials</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="repair-services.html" class="active">Repair Services</a></li>
-                    <li id="auth-section">
-                        <a href="login.html" class="nav-link">Login</a>
-                    </li>
-                </ul>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo/company-logo.png" alt="Last Resorts Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="repair-services.html" class="nav-link">Repair Services</a></li>
+                <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="cart.html" class="nav-link cart-icon">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+            <div class="hamburger">
+                <img src="images/icons/menu-icon.png" alt="Menu" class="menu-icon">
             </div>
         </div>
     </nav>
 
     <div class="repair-container">
-        <!-- Hero Section -->
+        <!-- Hero Section with Background Image -->
         <section class="hero-section">
+            <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>Professional Device Repair Services</h1>
                 <p class="hero-subtitle">Fast, reliable repairs with warranty on all our work</p>
                 <div class="hero-features">
                     <div class="feature">
-                        <span class="feature-icon">⚡</span>
+                        <span class="feature-icon">
+                            <img src="/images/same-day-repair-icon.png" alt="Same-Day Repairs Icon">
+                        </span>
                         <span>Same-Day Repairs</span>
                     </div>
                     <div class="feature">
-                        <span class="feature-icon">🛡️</span>
+                        <span class="feature-icon">
+                            <img src="/images/warranty-icon.png" alt="Warranty Icon">
+                        </span>
                         <span>90-Day Warranty</span>
                     </div>
                     <div class="feature">
-                        <span class="feature-icon">💎</span>
+                        <span class="feature-icon">
+                            <img src="/images/quality-parts-icon.png" alt="Quality Parts Icon">
+                        </span>
                         <span>Quality Parts</span>
-                    </div>
-                    <div class="feature">
-                        <span class="feature-icon">💰</span>
-                        <span>Free Diagnostics</span>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </section>
@@ -65,7 +71,7 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Diagnosis & Quote</h3>
-                        <p>Bring your device for free diagnostics. We'll provide a detailed quote with no hidden costs.</p>
+                        <p>Bring your device for PRO diagnostics. We'll provide a detailed quote with no hidden costs.</p>
                     </div>
                 </div>
                 <div class="process-step">
@@ -99,52 +105,13 @@
                 <p class="section-subtitle">Comprehensive solutions for all your electronic devices</p>
             </div>
             <div class="services-categories">
-                <!-- Smartphones & Tablets -->
-                <div class="service-category">
+                <!-- Laptops & Computers with Background Image -->
+                <div class="service-category laptops-category" style="background-image: url('/images/laptops-background.jpg');">
+                    <div class="category-overlay"></div>
                     <div class="category-header">
-                        <div class="category-icon">📱</div>
-                        <h3>Smartphones & Tablets</h3>
-                    </div>
-                    <div class="service-list">
-                        <div class="service-item">
-                            <h4>Screen Replacement</h4>
-                            <p>Cracked or broken display repair with original-quality screens</p>
-                            <div class="service-meta">
-                                <span class="price">From MK 350</span>
-                                <span class="duration">1-2 hours</span>
-                            </div>
+                        <div class="category-icon">
+                            <img src="../images/laptop-icon.png" alt="Laptop Icon" class="category-icon-img">
                         </div>
-                        <div class="service-item">
-                            <h4>Battery Replacement</h4>
-                            <p>Restore your device's battery life with genuine batteries</p>
-                            <div class="service-meta">
-                                <span class="price">From MK 250</span>
-                                <span class="duration">1 hour</span>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <h4>Charging Port Repair</h4>
-                            <p>Fix charging issues and port connectivity problems</p>
-                            <div class="service-meta">
-                                <span class="price">From MK 400</span>
-                                <span class="duration">1-2 hours</span>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <h4>Water Damage Repair</h4>
-                            <p>Professional cleaning and component replacement for liquid damage</p>
-                            <div class="service-meta">
-                                <span class="price">From MK 600</span>
-                                <span class="duration">2-3 hours</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Laptops & Computers -->
-                <div class="service-category">
-                    <div class="category-header">
-                        <div class="category-icon">💻</div>
                         <h3>Laptops & Computers</h3>
                     </div>
                     <div class="service-list">
@@ -180,13 +147,72 @@
                                 <span class="duration">2-3 hours</span>
                             </div>
                         </div>
+                        <div class="service-item">
+                            <h4>Virus Removal</h4>
+                            <p>Complete malware removal and system optimization</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 300</span>
+                                <span class="duration">2-3 hours</span>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <h4>Virus Removal</h4>
+                            <p>Complete malware removal and system optimization</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 300</span>
+                                <span class="duration">2-3 hours</span>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <h4>Virus Removal</h4>
+                            <p>Complete malware removal and system optimization</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 300</span>
+                                <span class="duration">2-3 hours</span>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <h4>Virus Removal</h4>
+                            <p>Complete malware removal and system optimization</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 300</span>
+                                <span class="duration">2-3 hours</span>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <h4>Virus Removal</h4>
+                            <p>Complete malware removal and system optimization</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 300</span>
+                                <span class="duration">2-3 hours</span>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <h4>Virus Removal</h4>
+                            <p>Complete malware removal and system optimization</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 300</span>
+                                <span class="duration">2-3 hours</span>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <h4>Virus Removal</h4>
+                            <p>Complete malware removal and system optimization</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 300</span>
+                                <span class="duration">2-3 hours</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Gaming & Special Devices -->
-                <div class="service-category">
+                <!-- Gaming & Special Devices with Background Image -->
+                <div class="service-category gaming-category" style="background-image: url('/images/gaming-background.jpg');">
+                    <div class="category-overlay"></div>
                     <div class="category-header">
-                        <div class="category-icon">🎮</div>
+                        <div class="category-icon">
+                            <img src="../images/gaming-icon.png" alt="Gaming Icon" class="category-icon-img">
+                        </div>
                         <h3>Gaming & Special Devices</h3>
                     </div>
                     <div class="service-list">
@@ -222,52 +248,107 @@
                                 <span class="duration">1-3 days</span>
                             </div>
                         </div>
+                        <div class="service-item">
+                            <h4>Data Recovery</h4>
+                            <p>Professional data retrieval from damaged storage devices</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 800</span>
+                                <span class="duration">1-3 days</span>
+                            </div>
+                        </div><div class="service-item">
+                            <h4>Data Recovery</h4>
+                            <p>Professional data retrieval from damaged storage devices</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 800</span>
+                                <span class="duration">1-3 days</span>
+                            </div>
+                        </div><div class="service-item">
+                            <h4>Data Recovery</h4>
+                            <p>Professional data retrieval from damaged storage devices</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 800</span>
+                                <span class="duration">1-3 days</span>
+                            </div>
+                        </div><div class="service-item">
+                            <h4>Data Recovery</h4>
+                            <p>Professional data retrieval from damaged storage devices</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 800</span>
+                                <span class="duration">1-3 days</span>
+                            </div>
+                        </div><div class="service-item">
+                            <h4>Data Recovery</h4>
+                            <p>Professional data retrieval from damaged storage devices</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 800</span>
+                                <span class="duration">1-3 days</span>
+                            </div>
+                        </div><div class="service-item">
+                            <h4>Data Recovery</h4>
+                            <p>Professional data retrieval from damaged storage devices</p>
+                            <div class="service-meta">
+                                <span class="price">From MK 800</span>
+                                <span class="duration">1-3 days</span>
+                            </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Choose Us -->
+        <!-- Why Choose Us with Image Icons -->
         <section class="section benefits-section">
             <div class="section-header">
                 <h2>Why Choose Our Repair Services?</h2>
             </div>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">🔧</div>
+                    <div class="benefit-icon">
+                        <img src="../images/certified-icon.png" alt="Certified Technician Icon" class="benefit-icon-img">
+                    </div>
                     <h4>Certified Technicians</h4>
                     <p>Our team undergoes continuous training on the latest repair techniques and technologies.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-icon">
+                        <img src="../images/fast-icon.png" alt="Fast Turnaround Icon" class="benefit-icon-img">
+                    </div>
                     <h4>Fast Turnaround</h4>
                     <p>Most repairs completed same-day. We understand you need your devices back quickly.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🛡️</div>
+                    <div class="benefit-icon">
+                        <img src="../images/warranty-icon.png" alt="Warranty Icon" class="benefit-icon-img">
+                    </div>
                     <h4>Warranty Protected</h4>
                     <p>90-day warranty on all repairs. We stand behind our work with confidence.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">💎</div>
+                    <div class="benefit-icon">
+                        <img src="../images/quality-icon.png" alt="Quality Parts Icon" class="benefit-icon-img">
+                    </div>
                     <h4>Quality Parts</h4>
                     <p>We use only genuine or high-quality compatible parts for lasting repairs.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-icon">
+                        <img src="../images/pricing-icon.png" alt="Transparent Pricing Icon" class="benefit-icon-img">
+                    </div>
                     <h4>Transparent Pricing</h4>
                     <p>No hidden fees. We provide detailed quotes before any work begins.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">📞</div>
+                    <div class="benefit-icon">
+                        <img src="../images/support-icon.png" alt="Free Support Icon" class="benefit-icon-img">
+                    </div>
                     <h4>Free Support</h4>
                     <p>Lifetime technical support and advice for all our repair customers.</p>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="section cta-section">
+        <!-- CTA Section with Background Image -->
+        <section class="cta-section" style="background-image: url('/images/cta-background.jpg');">
+            <div class="cta-overlay"></div>
             <div class="cta-content">
                 <h2>Ready to Repair Your Device?</h2>
                 <p>Bring your device for free diagnostics and get a same-day repair estimate</p>
@@ -278,41 +359,102 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="section faq-section">
-            <div class="section-header">
-                <h2>Repair FAQs</h2>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="section-header">
+            <h2>Repair FAQs</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
                     <h4>How long does a typical repair take?</h4>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
                     <p>Most common repairs like screen replacements take 1-2 hours. Complex repairs may take 1-2 days. We'll provide an accurate timeline during diagnostics.</p>
                 </div>
-                <div class="faq-item">
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
                     <h4>Do I need to backup my data before repair?</h4>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
                     <p>We always recommend backing up your data. While we take every precaution, some repairs may require data wiping. We can assist with backup services.</p>
                 </div>
-                <div class="faq-item">
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
                     <h4>What if my device can't be repaired?</h4>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
                     <p>If repair isn't cost-effective, we'll provide honest advice and may offer trade-in options toward a new device.</p>
                 </div>
-                <div class="faq-item">
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
                     <h4>Do you offer on-site repairs?</h4>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
                     <p>Currently, all repairs are done at our workshop where we have all necessary equipment for quality work.</p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo/footer-logo.png" alt="Last Resorts Logo" class="footer-logo">
+                    <h3>Last Resorts</h3>
+                    <p>Your Tech Partner in Malawi</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/images/facebook-icon.png" alt="Facebook"> Facebook</a>
+                        <a href="#"><img src="/images/instagram-icon.png" alt="Instagram"> Instagram</a>
+                        <a href="#"><img src="/images/linkedin-icon.png" alt="LinkedIn"> LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="pages/products.html">Products</a></li>
+                        <li><a href="pages/repair-services.html">Repair Services</a></li>
+                        <li><a href="pages/tutorials.html">Tutorials</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/admin-login.html">Admin Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                        <li><a href="pages/repair-services.html">Repair Services</a></li>
+                        <li><a href="pages/warranty.html">Warranty Info</a></li>
+                        <li><a href="pages/shipping.html">Shipping Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Last Resorts Computer and Electronics. All rights reserved. | Quality Tech Solutions in Malawi</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const currentUser = JSON.parse(localStorage.getItem('currentUser'));
             const authSection = document.getElementById('auth-section');
             
+       
             if (authSection && currentUser) {
                 authSection.innerHTML = `
-                    <span class="welcome-user">Welcome, ${currentUser.fname}</span>
-                    <button onclick="logout()" class="btn btn-secondary">Logout</button>
+                    <span class="nav-link welcome-user">Welcome, ${currentUser.fname}</span>
+                    <button onclick="logout()" class="btn btn-secondary nav-btn">Logout</button>
                 `;
             }
         });
@@ -321,6 +463,36 @@
             localStorage.removeItem('currentUser');
             window.location.href = 'repair-services.html';
         }
+        // FAQ Accordion Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', function() {
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    
+                    // Update toggle icon
+                    if (item.classList.contains('active')) {
+                        toggle.textContent = '×'; // Change to '×' when open
+                    } else {
+                        toggle.textContent = '+'; // Change back to '+' when closed
+                    }
+                });
+            });
+            
+        });
     </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

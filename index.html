@@ -12,8 +12,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Last Resorts</h2>
-                <span>Computers & Electronics</span>
+                <img src="images/logo/company-logo.png" alt="Last Resorts Logo" class="logo-img">
+                
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
@@ -25,15 +25,27 @@
                 <li class="nav-item"><a href="pages/cart.html" class="nav-link cart-icon">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <img src="images/icons/menu-icon.png" alt="Menu" class="menu-icon">
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('images/hero-background1.avif');"></div>
+            <div class="slide" style="background-image: url('images/hero-background2.avif');"></div>
+            <div class="slide" style="background-image: url('images/hero-background3.avif');"></div>
+            <div class="slide" style="background-image: url('images/hero-background4.avif');"></div>
+            <div class="slide" style="background-image: url('images/hero-background5.avif');"></div>
+            <div class="slide" style="background-image: url('images/hero-background6.avif');"></div>
+            <div class="slide" style="background-image: url('images/hero-background7.avif');"></div>
+            <div class="slide" style="background-image: url('images/hero-background8.avif');"></div>
+            
+            <!-- Add this line for the slideshow navigation dots -->
+            <div class="slideshow-controls"></div>
+        </div>
+        
         <div class="hero-content">
             <h1>Premium Tech Solutions in Malawi</h1>
             <p>Discover the latest gadgets, computers, and expert tutorials - Only at Last Resorts!</p>
@@ -42,16 +54,9 @@
                 <a href="pages/tutorials.html" class="btn btn-secondary">Start Learning</a>
             </div>
         </div>
-    </section>
-
-    <!-- Special Offers Banner -->
-    <section class="special-offers">
-        <div class="container">
-            <div class="offer-banner">
-                <span class="offer-tag">🔥 HOT DEAL</span>
-                <h3>Limited Time Offers - Up to 40% Off Premium Brands!</h3>
-                <p>Only at Last Resorts - Exclusive prices you won't find anywhere else in Malawi</p>
-            </div>
+        
+        <div class="hero-featured-image">
+            <img src="images/hero-background7.avif" alt="Featured Product" class="featured-product-img">
         </div>
     </section>
 
@@ -59,70 +64,689 @@
     <section id="featured-products" class="featured-products">
         <div class="container">
             <div class="section-header">
-                <h2>🔥 Featured Products</h2>
+                <img src="images/featured-icon.png" alt="Featured Icon" class="section-icon">
+                <h2>Featured Products</h2>
                 <p class="section-subtitle">Handpicked excellence - Only at Last Resorts</p>
             </div>
-            <div class="products-grid" id="featured-products-grid">
-                <!-- Products loaded by JavaScript -->
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">EXCLUSIVE</div>
+                    <div class="product-image">
+                        <img src="images/iphone-15-pro-max.jpg" alt="iPhone 15 Pro Max" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">APPLE</div>
+                        <h3 class="product-title">iPhone 15 Pro Max 1TB</h3>
+                        <div class="product-specs">6.7" Super Retina XDR • A17 Pro • Titanium • 5X Zoom</div>
+                        <div class="product-price">MWK 3,899,999</div>
+                        <div class="product-exclusive">Malawi Exclusive Stock</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="images/samsung-s24-ultra.jpg" alt="Samsung Galaxy S24 Ultra" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">SAMSUNG</div>
+                        <h3 class="product-title">Galaxy S24 Ultra 5G</h3>
+                        <div class="product-specs">12GB/512GB • Titanium Gray • 200MP • S Pen Included</div>
+                        <div class="product-price">MWK 2,499,999</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-badge discount">-15% OFF</div>
+                    <div class="product-image">
+                        <img src="images/google-pixel-8-pro.jpg" alt="Google Pixel 8 Pro" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">GOOGLE</div>
+                        <h3 class="product-title">Pixel 8 Pro 5G</h3>
+                        <div class="product-specs">12GB/256GB • Bay Blue • Tensor G3 • Best Camera</div>
+                        <div class="product-price">
+                            <span class="old-price">MWK 1,899,999</span>
+                            MWK 1,614,999
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="images/xiaomi-14-pro.jpg" alt="Xiaomi 14 Pro" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">XIAOMI</div>
+                        <h3 class="product-title">Xiaomi 14 Pro 5G</h3>
+                        <div class="product-specs">16GB/512GB • Leica Camera • Snapdragon 8 Gen 3</div>
+                        <div class="product-price">MWK 1,799,999</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">EXCLUSIVE</div>
+                    <div class="product-image">
+                        <img src="images/oneplus-12.jpg" alt="OnePlus 12" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">ONEPLUS</div>
+                        <h3 class="product-title">OnePlus 12 5G</h3>
+                        <div class="product-specs">16GB/512GB • Flowy Emerald • Hasselblad Camera</div>
+                        <div class="product-price">MWK 1,699,999</div>
+                        <div class="product-exclusive">100W Fast Charging</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">FLAGSHIP</div>
+                    <div class="product-image">
+                        <img src="images/samsung-fold5.jpg" alt="Samsung Galaxy Z Fold5" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">SAMSUNG</div>
+                        <h3 class="product-title">Galaxy Z Fold5 5G</h3>
+                        <div class="product-specs">12GB/1TB • Phantom Black • Foldable • S Pen</div>
+                        <div class="product-price">MWK 3,299,999</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">PRO</div>
+                    <div class="product-image">
+                        <img src="images/macbook-pro-16.jpg" alt="Apple MacBook Pro 16-inch" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">APPLE</div>
+                        <h3 class="product-title">MacBook Pro 16" M3 Max</h3>
+                        <div class="product-specs">48GB RAM • 2TB SSD • M3 Max • Space Black</div>
+                        <div class="product-price">MWK 6,499,999</div>
+                        <div class="product-exclusive">Free AirPods Pro 2</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-badge discount">-20% OFF</div>
+                    <div class="product-image">
+                        <img src="images/dell-xps-15.jpg" alt="Dell XPS 15 Laptop" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">DELL</div>
+                        <h3 class="product-title">XPS 15 9530 Laptop</h3>
+                        <div class="product-specs">32GB RAM • 1TB SSD • i9 • RTX 4070 • 3.5K OLED</div>
+                        <div class="product-price">
+                            <span class="old-price">MWK 4,200,000</span>
+                            MWK 3,359,999
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="images/hp-spectre-x360.jpg" alt="HP Spectre x360 Laptop" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">HP</div>
+                        <h3 class="product-title">Spectre x360 2-in-1</h3>
+                        <div class="product-specs">16GB RAM • 2TB SSD • i7 • 4K OLED • Nightfall Black</div>
+                        <div class="product-price">MWK 2,899,999</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">BUSINESS</div>
+                    <div class="product-image">
+                        <img src="images/lenovo-thinkpad-x1.jpg" alt="Lenovo ThinkPad X1 Carbon" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">LENOVO</div>
+                        <h3 class="product-title">ThinkPad X1 Carbon Gen 11</h3>
+                        <div class="product-specs">32GB RAM • 2TB SSD • i7 • 14" 2.8K OLED • 4G LTE</div>
+                        <div class="product-price">MWK 3,499,999</div>
+                        <div class="product-exclusive">3 Years Premium Warranty</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">GAMING</div>
+                    <div class="product-image">
+                        <img src="images/asus-rog-zephyrus.jpg" alt="ASUS ROG Zephyrus G16" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">ASUS</div>
+                        <h3 class="product-title">ROG Zephyrus G16</h3>
+                        <div class="product-specs">32GB RAM • 2TB SSD • i9 • RTX 4090 • 240Hz Nebula Display</div>
+                        <div class="product-price">MWK 5,999,999</div>
+                        <div class="product-exclusive">Ultimate Gaming Laptop</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <div class="product-badge discount">-25% OFF</div>
+                    <div class="product-image">
+                        <img src="images/surface-laptop-5.jpg" alt="Microsoft Surface Laptop 5" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">MICROSOFT</div>
+                        <h3 class="product-title">Surface Laptop 5</h3>
+                        <div class="product-specs">16GB RAM • 512GB SSD • i7 • 13.5" Touch • Platinum</div>
+                        <div class="product-price">
+                            <span class="old-price">MWK 2,500,000</span>
+                            MWK 1,874,999
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="images/imac-24-inch.jpg" alt="Apple iMac 24-inch" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">APPLE</div>
+                        <h3 class="product-title">iMac 24" M3</h3>
+                        <div class="product-specs">16GB RAM • 512GB SSD • 8-core CPU • 10-core GPU • Green</div>
+                        <div class="product-price">MWK 3,299,999</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">GAMING</div>
+                    <div class="product-image">
+                        <img src="images/alienware-aurora.jpg" alt="Dell Alienware Aurora R15" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">DELL</div>
+                        <h3 class="product-title">Alienware Aurora R15</h3>
+                        <div class="product-specs">64GB RAM • 4TB SSD • i9 • RTX 4090 • Liquid Cooling</div>
+                        <div class="product-price">MWK 7,999,999</div>
+                        <div class="product-exclusive">Ultimate Gaming PC</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card">
+                    <div class="product-badge discount">-30% OFF</div>
+                    <div class="product-image">
+                        <img src="images/hp-omen-45l.jpg" alt="HP Omen 45L Gaming Desktop" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">HP</div>
+                        <h3 class="product-title">OMEN 45L Gaming Desktop</h3>
+                        <div class="product-specs">32GB RAM • 2TB SSD • i7 • RTX 4080 • Cryo Chamber</div>
+                        <div class="product-price">
+                            <span class="old-price">MWK 5,500,000</span>
+                            MWK 3,849,999
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">WORKSTATION</div>
+                    <div class="product-image">
+                        <img src="images/lenovo-thinkstation.jpg" alt="Lenovo ThinkStation P620" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">LENOVO</div>
+                        <h3 class="product-title">ThinkStation P620</h3>
+                        <div class="product-specs">128GB RAM • 8TB SSD • Threadripper Pro • RTX A6000</div>
+                        <div class="product-price">MWK 12,999,999</div>
+                        <div class="product-exclusive">Professional Workstation</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="images/apple-watch-ultra2.jpg" alt="Apple Watch Ultra 2" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">APPLE</div>
+                        <h3 class="product-title">Apple Watch Ultra 2</h3>
+                        <div class="product-specs">49mm Titanium • Cellular • Ocean Band • 36hr Battery</div>
+                        <div class="product-price">MWK 1,299,999</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card">
+                    <div class="product-badge discount">-20% OFF</div>
+                    <div class="product-image">
+                        <img src="images/samsung-watch6.jpg" alt="Samsung Galaxy Watch6 Classic" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">SAMSUNG</div>
+                        <h3 class="product-title">Galaxy Watch6 Classic</h3>
+                        <div class="product-specs">47mm • LTE • Rotating Bezel • Sapphire Glass • Black</div>
+                        <div class="product-price">
+                            <span class="old-price">MWK 850,000</span>
+                            MWK 679,999
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">PRO</div>
+                    <div class="product-image">
+                        <img src="images/garmin-fenix7.jpg" alt="Garmin Fenix 7X Sapphire Solar" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">GARMIN</div>
+                        <h3 class="product-title">Fenix 7X Sapphire Solar</h3>
+                        <div class="product-specs">51mm • Solar Charging • Multi-band GPS • 37 Days Battery</div>
+                        <div class="product-price">MWK 1,599,999</div>
+                        <div class="product-exclusive">Advanced Sports Watch</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="images/huawei-watch-gt4.jpg" alt="Huawei Watch GT 4" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">HUAWEI</div>
+                        <h3 class="product-title">Watch GT 4 46mm</h3>
+                        <div class="product-specs">Stainless Steel • 2 Week Battery • 100+ Sport Modes</div>
+                        <div class="product-price">MWK 549,999</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 21 -->
+                <div class="product-card">
+                    <div class="product-badge discount">-25% OFF</div>
+                    <div class="product-image">
+                        <img src="images/airpods-max.jpg" alt="Apple AirPods Max" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">APPLE</div>
+                        <h3 class="product-title">AirPods Max - Space Gray</h3>
+                        <div class="product-specs">Active Noise Cancellation • Spatial Audio • 20hr Battery</div>
+                        <div class="product-price">
+                            <span class="old-price">MWK 1,200,000</span>
+                            MWK 899,999
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 22 -->
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="images/samsung-buds2-pro.jpg" alt="Samsung Galaxy Buds2 Pro" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">SAMSUNG</div>
+                        <h3 class="product-title">Galaxy Buds2 Pro</h3>
+                        <div class="product-specs">Hi-Fi 24bit Audio • ANC • IPX7 Waterproof • Bora Purple</div>
+                        <div class="product-price">MWK 399,999</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 23 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">PRODUCTIVITY</div>
+                    <div class="product-image">
+                        <img src="images/logitech-mx-master.jpg" alt="Logitech MX Master 3S Mouse" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">LOGITECH</div>
+                        <h3 class="product-title">MX Master 3S Mouse</h3>
+                        <div class="product-specs">8K DPI • MagSpeed Scroll • Multi-Device • 70 Days Battery</div>
+                        <div class="product-price">MWK 249,999</div>
+                        <div class="product-exclusive">Best for Productivity</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 24 -->
+                <div class="product-card">
+                    <div class="product-badge exclusive">POWER</div>
+                    <div class="product-image">
+                        <img src="images/anker-737-powerbank.jpg" alt="Anker 737 Power Bank" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">ANKER</div>
+                        <h3 class="product-title">737 Power Bank (PowerCore 24K)</h3>
+                        <div class="product-specs">24,000mAh • 140W Output • Charges Laptop • Digital Display</div>
+                        <div class="product-price">MWK 299,999</div>
+                        <div class="product-exclusive">Charges MacBook Pro</div>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
             </div>
             <div class="text-center">
-                <a href="pages/products.html" class="btn btn-primary btn-large">View All Products</a>
+                <a href="pages/products.html" class="btn btn-primary btn-large">View All 150+ Products</a>
             </div>
         </div>
     </section>
 
-<!-- Brand Showcase -->
-<section class="brands-showcase">
-    <div class="container">
-        <h3>Trusted by Top Brands</h3>
-        <div class="brands-grid">
-            <div class="brand-logo">
-                <div class="brand-icon">🍎</div>
-                <span class="brand-name">APPLE</span>
-            </div>
-            <div class="brand-logo">
-                <div class="brand-icon">📱</div>
-                <span class="brand-name">SAMSUNG</span>
-            </div>
-            <div class="brand-logo">
-                <div class="brand-icon">💻</div>
-                <span class="brand-name">DELL</span>
-            </div>
-            <div class="brand-logo">
-                <div class="brand-icon">🖥️</div>
-                <span class="brand-name">HP</span>
-            </div>
-            <div class="brand-logo">
-                <div class="brand-icon">💼</div>
-                <span class="brand-name">LENOVO</span>
-            </div>
-            <div class="brand-logo">
-                <div class="brand-icon">🔍</div>
-                <span class="brand-name">GOOGLE</span>
+    <!-- Brand Showcase -->
+    <section class="brands-showcase">
+        <div class="container">
+            <h3>Trusted by Top Brands</h3>
+            <div class="brands-grid">
+                <div class="brand-logo">
+                    <img src="images/apple-logo.png" alt="Apple" class="brand-img">
+                    <span class="brand-name">APPLE</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="images/samsung-logo.png" alt="Samsung" class="brand-img">
+                    <span class="brand-name">SAMSUNG</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="images/dell-logo.png" alt="Dell" class="brand-img">
+                    <span class="brand-name">DELL</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="images/hp-logo.png" alt="HP" class="brand-img">
+                    <span class="brand-name">HP</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="images/lenovo-logo.png" alt="Lenovo" class="brand-img">
+                    <span class="brand-name">LENOVO</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="images/google-logo.png" alt="Google" class="brand-img">
+                    <span class="brand-name">GOOGLE</span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Tutorials Preview -->
     <section class="tutorials-preview">
         <div class="container">
             <div class="section-header">
-                <h2>🎓 Free Learning Resources</h2>
-                <p class="section-subtitle">tutorials to boost your tech skills</p>
+                <h2>Free Tech Tutorials</h2>
+                <p class="section-subtitle">Learn to fix, maintain, and optimize your devices</p>
             </div>
-            <div class="tutorials-preview-grid" id="tutorials-preview">
-                <!-- Tutorials loaded by JavaScript -->
+            
+            <div class="tutorials-preview-grid">
+
+                <!-- Tutorial 1 - Windows Troubleshooting -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <div class="video-wrapper">
+                            <img src="https://img.youtube.com/vi/VIDEO_ID_1/maxresdefault.jpg"
+                                class="video-thumb"
+                                onclick="showVideo(this)"
+                                alt="Fix Windows Slow Performance">
+                            <iframe class="video-iframe"
+                                    src="https://www.youtube.com/embed/MdXNgspWWKg"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3 class="tutorial-title">Fix Windows Slow Performance</h3>
+                        <p class="tutorial-description">Speed up your Windows 10/11 computer with these simple optimization steps</p>
+                        <div class="tutorial-meta">
+                            <span class="duration">1 min</span>
+                            <span class="level">Beginner!</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=MdXNgspWWKg" target="_blank" class="btn btn-primary btn-small">
+                            Watch Free
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 2 - Laptop Cleaning -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <div class="video-wrapper">
+                            <img src="https://img.youtube.com/vi/VIDEO_ID_2/maxresdefault.jpg"
+                                class="video-thumb"
+                                onclick="showVideo(this)"
+                                alt="Clean Laptop Properly">
+                            <iframe class="video-iframe"
+                                    src="https://www.youtube.com/embed/J1KlRklVGMk"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3 class="tutorial-title">Laptop Cleaning & Maintenance</h3>
+                        <p class="tutorial-description">Step-by-step guide to clean your laptop safely and extend its lifespan</p>
+                        <div class="tutorial-meta">
+                            <span class="duration">2:47 min</span>
+                            <span class="level">Beginner!</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=J1KlRklVGMk" target="_blank" class="btn btn-primary btn-small">Watch Free</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 3 - Virus Removal -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <div class="video-wrapper">
+                            <img src="https://img.youtube.com/vi/VIDEO_ID_3/maxresdefault.jpg"
+                                class="video-thumb"
+                                onclick="showVideo(this)"
+                                alt="Remove Viruses & Malware">
+                            <iframe class="video-iframe"
+                                    src="https://www.youtube.com/embed/pwS5Pz1VEA8"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3 class="tutorial-title">Virus & Malware Removal Guide</h3>
+                        <p class="tutorial-description">Complete walkthrough to remove viruses and protect your computer</p>
+                        <div class="tutorial-meta">
+                            <span class="duration">11:36 min</span>
+                            <span class="level"> Intermediate!</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=pwS5Pz1VEA8" target="_blank" class="btn btn-primary btn-small">Watch Free</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 4 - PC Assembly -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <div class="video-wrapper">
+                            <img src="https://img.youtube.com/vi/VIDEO_ID_4/maxresdefault.jpg"
+                                class="video-thumb"
+                                onclick="showVideo(this)"
+                                alt="Build Your First PC">
+                            <iframe class="video-iframe"
+                                    src="https://www.youtube.com/embed/PXaLc9AYIcg"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3 class="tutorial-title">Build Your First PC - Step by Step</h3>
+                        <p class="tutorial-description">Complete beginner's guide to assembling a desktop computer</p>
+                        <div class="tutorial-meta">
+                            <span class="duration">1:05:01 min</span>
+                            <span class="level">Intermediate!</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=PXaLc9AYIcg" target="_blank" class="btn btn-primary btn-small">Watch Free</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 5 - Data Backup -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <div class="video-wrapper">
+                            <img src="https://img.youtube.com/vi/VIDEO_ID_5/maxresdefault.jpg"
+                                class="video-thumb"
+                                onclick="showVideo(this)"
+                                alt="Backup Your Files">
+                            <iframe class="video-iframe"
+                                    src="https://www.youtube.com/embed/kDYKLzm-EMo"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3 class="tutorial-title">Data Backup & Recovery</h3>
+                        <p class="tutorial-description">Protect your important files with proper backup strategies</p>
+                        <div class="tutorial-meta">
+                            <span class="duration">18:48 min</span>
+                            <span class="level">Beginner!</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=kDYKLzm-EMo" target="_blank" class="btn btn-primary btn-small">Watch Free</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 6 - WiFi Problems -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <div class="video-wrapper">
+                            <img src="https://img.youtube.com/vi/VIDEO_ID_6/maxresdefault.jpg"
+                                class="video-thumb"
+                                onclick="showVideo(this)"
+                                alt="Fix WiFi Issues">
+                            <iframe class="video-iframe"
+                                    src="https://www.youtube.com/embed/LPxxvGOkElg"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3 class="tutorial-title">Fix WiFi & Internet Problems</h3>
+                        <p class="tutorial-description">Troubleshoot and fix common WiFi connection issues</p>
+                        <div class="tutorial-meta">
+                            <span class="duration">11:38 min</span>
+                            <span class="level">Beginner!</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=LPxxvGOkElg" target="_blank" class="btn btn-primary btn-small">Watch Free</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 7 - Blue Screen Fix -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <div class="video-wrapper">
+                            <img src="https://img.youtube.com/vi/VIDEO_ID_7/maxresdefault.jpg"
+                                class="video-thumb"
+                                onclick="showVideo(this)"
+                                alt="Fix Blue Screen Errors">
+                            <iframe class="video-iframe"
+                                    src="https://www.youtube.com/embed/-WML2MLKt0o"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3 class="tutorial-title">Fix Blue Screen of Death (BSOD)</h3>
+                        <p class="tutorial-description">Diagnose and fix Windows blue screen errors permanently</p>
+                        <div class="tutorial-meta">
+                            <span class="duration">8:13 min</span>
+                            <span class="level">Advanced!</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=-WML2MLKt0o" target="_blank" class="btn btn-primary btn-small">Watch Free</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 8 - Printer Setup -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <div class="video-wrapper">
+                            <img src="https://img.youtube.com/vi/VIDEO_ID_8/maxresdefault.jpg"
+                                class="video-thumb"
+                                onclick="showVideo(this)"
+                                alt="Setup Wireless Printer">
+                            <iframe class="video-iframe"
+                                    src="https://www.youtube.com/embed/JbA-E3s72o8"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3 class="tutorial-title">Wireless Printer Setup & Troubleshooting</h3>
+                        <p class="tutorial-description">Connect and troubleshoot common printer issues</p>
+                        <div class="tutorial-meta">
+                            <span class="duration">9:12 min</span>
+                            <span class="level">Beginner!</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=JbA-E3s72o8" target="_blank" class="btn btn-primary btn-small">Watch Free</a>
+                    </div>
+                </div>
+
             </div>
+            
             <div class="text-center">
                 <a href="pages/tutorials.html" class="btn btn-outline btn-large">Access All Tutorials</a>
             </div>
         </div>
     </section>
 
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
+            <div class="cta-background">
+                <img src="images/cta/cta-background.jpg" alt="Tech Community" class="cta-bg-img">
+            </div>
             <div class="cta-content">
                 <h2>Ready to Level Up Your Tech Game?</h2>
                 <p>Join thousands of satisfied customers who trust Last Resorts for quality products and expert knowledge</p>
@@ -133,18 +757,19 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
+                    <img src="images/logo/footer-logo.png" alt="Last Resorts Logo" class="footer-logo">
                     <h3>Last Resorts</h3>
                     <p>Your Tech Partner in Malawi</p>
                     <div class="social-links">
-                        <a href="#">📘 Facebook</a>
-                        <a href="#">📷 Instagram</a>
-                        <a href="#">💼 LinkedIn</a>
+                        <a href="#"><img src="/images/facebook-icon.png" alt="Facebook"> Facebook</a>
+                        <a href="#"><img src="/images/instagram-icon.png" alt="Instagram"> Instagram</a>
+                        <a href="#"><img src="/images/linkedin-icon.png" alt="LinkedIn"> LinkedIn</a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -169,40 +794,184 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Last Resorts Computer and Electronics. All rights reserved. | Quality Tech Solutions in Malawi</p>
+                <p>&copy; 2026 Last Resorts Computer and Electronics. All rights reserved. | Quality Tech Solutions in Malawi</p>
             </div>
         </div>
     </footer>
+
+    
+
     <script>
-        console.log('🔍 INDEX PAGE DEBUG');
-        console.log('Current user:', JSON.parse(localStorage.getItem('currentUser')));
-        console.log('All users:', JSON.parse(localStorage.getItem('users') || '[]'));
+    // Debug script
+    console.log('INDEX PAGE DEBUG');
+    console.log('Current user:', JSON.parse(localStorage.getItem('currentUser')));
+    console.log('All users:', JSON.parse(localStorage.getItem('users') || '[]'));
+    
+    // Test if user can login manually
+    window.testLogin = function(email, password) {
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
+        console.log('Testing login with:', email);
+        console.log('Available users:', users);
         
-        // Test if user can login manually
-        window.testLogin = function(email, password) {
-            const users = JSON.parse(localStorage.getItem('users') || '[]');
-            console.log('Testing login with:', email);
-            console.log('Available users:', users);
-            
-            const user = users.find(u => u.email === email && u.password === password);
-            if (user) {
-                console.log('✅ Manual login successful');
-                const userSession = {
-                    email: user.email,
-                    name: user.fname + ' ' + user.lname,
-                    fname: user.fname,
-                    lname: user.lname,
-                    phone: user.phone,
-                    role: user.role,
-                    loginTime: new Date().toISOString()
-                };
-                localStorage.setItem('currentUser', JSON.stringify(userSession));
-                alert('Manual login successful! Refresh page.');
-            } else {
-                console.log('❌ Manual login failed');
+        const user = users.find(u => u.email === email && u.password === password);
+        if (user) {
+            console.log('Manual login successful');
+            const userSession = {
+                email: user.email,
+                name: user.fname + ' ' + user.lname,
+                fname: user.fname,
+                lname: user.lname,
+                phone: user.phone,
+                role: user.role,
+                loginTime: new Date().toISOString()
+            };
+            localStorage.setItem('currentUser', JSON.stringify(userSession));
+            alert('Manual login successful! Refresh page.');
+        } else {
+            console.log('Manual login failed');
+        }
+    };
+    
+    // Hero Slideshow JavaScript - Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Initializing hero slideshow...');
+        
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.querySelector('.slideshow-controls');
+        
+        if (!slides.length) {
+            console.error('No slides found!');
+            return;
+        }
+        
+        if (!dotsContainer) {
+            console.error('No slideshow controls container found!');
+            return;
+        }
+        
+        console.log(`Found ${slides.length} slides`);
+        
+        let currentSlide = 0;
+        const slideInterval = 3000; // 3 seconds
+        
+        // Create dots for slideshow
+        slides.forEach((slide, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'slideshow-dot';
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+        
+        const dots = document.querySelectorAll('.slideshow-dot');
+        console.log(`Created ${dots.length} navigation dots`);
+        
+        function goToSlide(n) {
+            // Reset current slide
+            slides[currentSlide].classList.remove('active');
+            if (dots[currentSlide]) {
+                dots[currentSlide].classList.remove('active');
             }
-        };
-    </script>
+            
+            // Set new slide
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            if (dots[currentSlide]) {
+                dots[currentSlide].classList.add('active');
+            }
+            
+            console.log(`Changed to slide ${currentSlide + 1}`);
+        }
+        
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+        
+        // Auto-advance slides
+        let slideTimer = setInterval(nextSlide, slideInterval);
+        console.log('Slideshow timer started (3 seconds interval)');
+        
+        // Pause slideshow on hover
+        const heroSection = document.querySelector('.hero-slideshow');
+        if (heroSection) {
+            heroSection.addEventListener('mouseenter', () => {
+                console.log('Slideshow paused');
+                clearInterval(slideTimer);
+            });
+            
+            heroSection.addEventListener('mouseleave', () => {
+                console.log('Slideshow resumed');
+                slideTimer = setInterval(nextSlide, slideInterval);
+            });
+            
+            // Touch/swipe support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            heroSection.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            heroSection.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            
+            if (touchEndX < touchStartX - swipeThreshold) {
+                console.log('Swipe left - next slide');
+                nextSlide();
+            }
+            
+            if (touchEndX > touchStartX + swipeThreshold) {
+                console.log('Swipe right - previous slide');
+                goToSlide(currentSlide - 1);
+            }
+        }
+        
+        // Start the slideshow
+        console.log('Hero slideshow initialized successfully!');
+    });
+    // Function to show/hide video when thumbnail is clicked
+    function showVideo(element) {
+        const videoWrapper = element.closest('.video-wrapper');
+        const videoIframe = videoWrapper.querySelector('.video-iframe');
+        const videoSrc = videoIframe.src;
+        
+        // Toggle playing state
+        if (videoWrapper.classList.contains('playing')) {
+            // Pause video by reloading iframe without autoplay
+            videoIframe.src = videoSrc.replace('autoplay=1', 'autoplay=0');
+            videoWrapper.classList.remove('playing');
+        } else {
+            // Add autoplay parameter and play video
+            let newSrc = videoSrc;
+            if (!newSrc.includes('autoplay=')) {
+                newSrc += (newSrc.includes('?') ? '&' : '?') + 'autoplay=1';
+            } else {
+                newSrc = newSrc.replace('autoplay=0', 'autoplay=1');
+            }
+            videoIframe.src = newSrc;
+            videoWrapper.classList.add('playing');
+        }
+    }
+
+    // Initialize video click handlers when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        const videoThumbs = document.querySelectorAll('.video-thumb');
+        
+        videoThumbs.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                showVideo(this);
+            });
+        });
+    });
+        
+</script>
+
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
 </body>

@@ -28,7 +28,7 @@ function addToCart(productId) {
     
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
-    alert(`✅ ${product.name} added to cart!`);
+    alert(`${product.name} added to cart!`);
 }
 
 function updateCartCount() {
@@ -101,7 +101,7 @@ function addToCartFromProducts(productId, productName, productPrice, productImag
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
     
-    alert(`✅ ${productName} added to cart!\nPrice: MWK ${productPrice.toLocaleString()}`);
+    alert(`${productName} added to cart!\nPrice: MWK ${productPrice.toLocaleString()}`);
 }
 
 // Update cart count
@@ -113,3 +113,42 @@ function updateCartCount() {
         cartCount.textContent = totalItems;
     }
 }
+// Mobile menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Toggle mobile menu
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (event) => {
+    if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
+
+// Cart count update (if you have cart functionality)
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCount = document.getElementById('cart-count');
+    if (cartCount) {
+        const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        cartCount.textContent = totalItems;
+    }
+}
+
+// Update cart count on page load
+document.addEventListener('DOMContentLoaded', updateCartCount);

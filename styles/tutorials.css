@@ -60,22 +60,26 @@
 
 /* Welcome Banner */
 .welcome-banner {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(rgba(51, 7, 92, 0.692),rgba(0, 0, 0, 0.7)), 
+                url('../images/tutorials-bg.jpg') repeat;
     color: white;
-    padding: 3rem 2rem;
-    border-radius: 15px;
-    margin-bottom: 3rem;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .welcome-banner h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .welcome-banner p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     opacity: 0.9;
 }
 
@@ -320,5 +324,176 @@
 
     .welcome-banner {
         padding: 2rem 1rem;
+    }
+}
+/* ==================== */
+/* FOOTER STYLES */
+/* ==================== */
+.footer {
+    background: #111827;
+    color: #f3f4f6;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.footer-section h3 {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section p {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #374151;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-section ul li a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.footer-section ul li a:hover {
+    color: #60a5fa;
+    padding-left: 5px;
+}
+/* ==================== */
+/* SOCIAL LINKS STYLES - FIXED */
+/* ==================== */
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.social-links img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Footer Social Links - FIXED */
+.footer .social-links {
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer .social-links a {
+    color: #d1d5db;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.footer .social-links a:hover {
+    color: #60a5fa;
+    background: rgba(59, 130, 246, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #374151;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .social-links a {
+        width: 200px;
+        justify-content: center;
     }
 }

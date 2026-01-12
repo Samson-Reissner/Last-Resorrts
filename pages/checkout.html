@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Last Resorts</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/checkout.css">
 </head>
 <body>
@@ -12,20 +13,19 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Last Resorts</h2>
-                <span>Computers & Electronics</span>
+                <img src="images/logo/company-logo.png" alt="Last Resorts Logo" class="logo-img">
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-                <li class="nav-item"><a href="../index.html#tutorials" class="nav-link">Tutorials</a></li>
-                <li class="nav-item"><a href="../index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="repair-services.html" class="nav-link">Repair Services</a></li>
+                <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
                 <li class="nav-item"><a href="cart.html" class="nav-link cart-icon">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <img src="images/icons/menu-icon.png" alt="Menu" class="menu-icon">
             </div>
         </div>
     </nav>
@@ -119,15 +119,119 @@
                             </div>
                             <div class="payment-option">
                                 <input type="radio" id="natsave" name="payment" value="natsave" required>
-                                <label for="natsave">NATSAVE Mobile</label>
+                                <label for="natsave">NATIONAL BANK</label>
                             </div>
                         </div>
 
-                        <!-- Payment Proof Upload -->
-                        <div class="form-group" id="payment-proof-section" style="display: none;">
-                            <label for="payment-proof">Upload Payment Screenshot</label>
-                            <input type="file" id="payment-proof" name="payment-proof" accept="image/*">
-                            <small>Please upload a screenshot of your mobile money payment confirmation</small>
+                        <!-- Payment Details (shown when payment method is selected) -->
+                        <div class="payment-details" id="payment-details" style="display: none;">
+                            <div class="payment-instruction">
+                                <h4>Payment Instructions</h4>
+                                
+                                <!-- Airtel Money Details -->
+                                <div class="payment-method-details" id="airtel-details" style="display: none;">
+                                    <p><strong>Airtel Money Account Details:</strong></p>
+                                    <div class="account-info">
+                                        <p><strong>Account Name:</strong> Last Resorts</p>
+                                        <p><strong>Account Number:</strong> 0993 456 789</p>
+                                        <p><strong>Reference:</strong> Your Order Number [from your screenshot]</p>
+                                    </div>
+                                    <div class="payment-steps">
+                                        <p><strong>How to Pay: (Mobile App)</strong></p>
+                                        <ol>
+                                            <li>Go to Airtel Money menu on your phone</li>
+                                            <li>Select "Send Money"</li>
+                                            <li>Enter phone number: <strong>0993 456 789</strong></li>
+                                            <li>Enter amount: <strong id="airtel-amount">MWK 0</strong></li>
+                                            <li>Use your order number as reference</li>
+                                            <li>Complete transaction</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <!-- TNM Mpamba Details -->
+                                <div class="payment-method-details" id="mpamba-details" style="display: none;">
+                                    <p><strong>TNM Mpamba Account Details:</strong></p>
+                                    <div class="account-info">
+                                        <p><strong>Account Name:</strong> Last Resorts</p>
+                                        <p><strong>Account Number:</strong> 0888 123 456</p>
+                                        <p><strong>Reference:</strong> Your Order Number [from your screenshot]</p>
+                                    </div>
+                                    <div class="payment-steps">
+                                        <p><strong>How to Pay:</strong></p>
+                                        <ol>
+                                            <li>Dial *444# on your TNM line</li>
+                                            <li>Select "Send Money"</li>
+                                            <li>Enter phone number: <strong>0888 123 456</strong></li>
+                                            <li>Enter amount: <strong id="mpamba-amount">MWK 0</strong></li>
+                                            <li>Use your order number as reference</li>
+                                            <li>Confirm transaction with PIN</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <!-- National Bank Details -->
+                                <div class="payment-method-details" id="natsave-details" style="display: none;">
+                                    <p><strong>NATIONAL BANK Account Details:</strong></p>
+                                    <div class="account-info">
+                                        <p><strong>Account Name:</strong> Last Resorts</p>
+                                        <p><strong>Account Number:</strong> 1010 582667</p>
+                                        <p><strong>Bank Branch:</strong> City Centre Branch, Lilongwe</p>
+                                        <p><strong>SWIFT Code:</strong> NBMI MW MW</p>
+                                        <p><strong>Reference:</strong> Your Order Number [from your screenshot]</p>
+                                    </div>
+                                    <div class="payment-steps">
+                                        <p><strong>How to Pay (Mobile Banking App):</strong></p>
+                                        <ol>
+                                            <li>Open the NBM Mobile App</li>
+                                            <li>Login (Enter your PIN/biometric)</li>
+                                            <li>Select "Funds Transfer" or "Send Money"</li>
+                                            <li>Choose "Own Bank/NBM Transfer"</li>
+                                            <li>Enter account number: <strong>1010 582667</strong></li>
+                                            <li>Enter recipient's name: <strong>Last Resorts</strong></li>
+                                            <li>Depit amount: <strong id="natsave-amount-app">MWK 0</strong></li>
+                                            <li>Use your order number as reference</li>
+                                            <li>Confirm transaction with your PIN</li>
+                                            <li>Save a screenshot for proof of payment</li>
+                                        </ol>
+                                        <br>
+                                        <p><strong>How to Pay (Using *USSD CODE*):</strong></p>
+                                        <ol>
+                                            <li>Dial *626#</li>
+                                            <li>Select "Send Money"</li>
+                                            <li>Choose either "NBM to NBM" or "To another Bank"</li>
+                                            <li>Enter account number: <strong>1010 582667</strong></li>
+                                            <li>Depit amount: <strong id="natsave-amount-ussd">MWK 0</strong></li>
+                                            <li>Confirm transaction with your PIN</li>
+                                            <li>Save a screenshot for proof of payment</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Proof Upload -->
+                            <div class="form-group" id="payment-proof-section">
+                                <label for="payment-proof">Upload Payment Proof</label>
+                                <div class="upload-instruction">
+                                    <p><small>Please upload clear screenshot/photos of:</small></p>
+                                    <ul>
+                                        <li><small>Mobile money transaction confirmation</small></li>
+                                        <li><small>Bank deposit slip (front and back)</small></li>
+                                        <li><small>Online banking payment receipt</small></li>
+                                    </ul>
+                                </div>
+                                <input type="file" id="payment-proof" name="payment-proof" accept="image/*,.pdf" required>
+                                <small>Accepted formats: JPG, PNG, PDF (Max 5MB)</small>
+                                <div class="upload-preview" id="upload-preview" style="display: none;">
+                                    <p>Preview:</p>
+                                    <img id="preview-image" src="#" alt="Preview" style="max-width: 200px; max-height: 200px;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="reference-proof">Upload Reference Number Screenshot</label>
+                                    <input type="file" id="reference-proof" name="reference-proof" accept="image/*" required>
+                                    <small>Upload screenshot of the reference number popup you saw</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -147,27 +251,43 @@
         </div>
     </div>
 
-    <!-- Footer -->
+<!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
+                    <img src="images/logo/footer-logo.png" alt="Last Resorts Logo" class="footer-logo">
                     <h3>Last Resorts</h3>
-                    <p>Computers & Electronics</p>
+                    <p>Your Tech Partner in Malawi</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/images/facebook-icon.png" alt="Facebook"> Facebook</a>
+                        <a href="#"><img src="/images/instagram-icon.png" alt="Instagram"> Instagram</a>
+                        <a href="#"><img src="/images/linkedin-icon.png" alt="LinkedIn"> LinkedIn</a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="pages/tutorials-login.html">Tutorials</a></li>
-                        <li><a href="../index.html#about">About</a></li>
-                        <li><a href="admin-login.html">Admin Dashboard</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="pages/products.html">Products</a></li>
+                        <li><a href="pages/repair-services.html">Repair Services</a></li>
+                        <li><a href="pages/tutorials.html">Tutorials</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/admin-login.html">Admin Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../pages/contact.html">Contact Us</a></li>
+                        <li><a href="../pages/repair-services.html">Repair Services</a></li>
+                        <li><a href="../pages/warranty.html">Warranty Info</a></li>
+                        <li><a href="../pages/shipping.html">Shipping Policy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Last Resorts Computer and Electronics. All rights reserved.</p>
+                <p>&copy; 2026 Last Resorts Computer and Electronics. All rights reserved. | Quality Tech Solutions in Malawi</p>
             </div>
         </div>
     </footer>
